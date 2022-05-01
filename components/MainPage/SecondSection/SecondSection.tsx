@@ -5,11 +5,11 @@ import MainSVG from "public/SecondSection/Main.svg";
 function SecondSection() {
     return (
         <section
-            className="flex min-h-screen w-full items-center bg-primary-200"
+            className="flex min-h-screen w-full items-center bg-primary-200 py-20"
             id="about"
         >
             <div className=" mx-auto flex w-11/12 max-w-7xl cursor-default items-center justify-between gap-20">
-                <div className="hidden w-1/2 md:inline-block">
+                <div className="hidden md:inline-block">
                     <Image
                         src={MainSVG}
                         width={600}

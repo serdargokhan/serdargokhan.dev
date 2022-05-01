@@ -11,7 +11,7 @@ function NavItems() {
                 <a href="#contact">Contact</a>
             </li>
             <li>
-                <a href="/" rel="noopener noreferrer" target="_blank">
+                <a href="Resume.pdf" rel="noopener noreferrer" target="_blank">
                     <button className="rounded-md border-2 border-primary-200 px-3 py-1 font-semibold text-primary-300 transition-all hover:bg-primary-200 hover:text-white">
                         Resume
                     </button>

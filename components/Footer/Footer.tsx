@@ -13,7 +13,7 @@ function Footer() {
                     <p className="text-6xl font-bold text-primary-300">
                         Contact Me
                     </p>
-                    <p className="text-lg font-semibold text-primary-300">
+                    <p className="text-justify text-lg font-semibold text-primary-300">
                         Now, here we are in the best part. If you have any
                         questions or you want to say just hi, feel free to
                         contact me. I will do my best to reply as soon as

@@ -36,14 +36,19 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <meta property="og:type" content="website" />
 
-                <meta property="og:title" content="Serdar Gökhan Portfolio" />
+                <meta
+                    property="og:title"
+                    content="Serdar Gökhan's Web Portfolio"
+                />
                 <meta
                     property="og:description"
-                    content="A Front-End Developer Porfolio Website"
+                    content="I’m a front-end developer also a mechatronics engineer
+                    building scalable, cross-browser compatible, performant,
+                    and responsive websites located in İstanbul."
                 />
                 <meta
                     property="og:image"
-                    content="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+                    content="https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
                 />
                 <meta property="og:url" content="serdargokhan.dev" />
                 <meta property="og:site_name" content="serdargokhan.dev" />

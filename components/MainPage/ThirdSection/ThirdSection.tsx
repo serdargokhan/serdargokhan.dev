@@ -21,7 +21,7 @@ function ThirdSection() {
                         <>
                             <ProjectItems
                                 title="Microsoft To-Do Clone(Unfinished)"
-                                website="https://github.com/serdargokhan"
+                                website="https://microsoft-todo-clone.vercel.app/"
                                 source="https://github.com/serdargokhan/microsoft-todo-clone"
                                 description="This is the biggest project that I have in my portfolio. It took me so long even to get the project so far. I could not finish it due to work but I have done a lot. I owe a lot of new knowledge to this project. In this project I have used TypeScript, SCSS, Firebase Authentication, and MongoDB. I learnt MongoDB from scratch with this project."
                                 stack={

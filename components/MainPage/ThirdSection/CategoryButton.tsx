@@ -14,7 +14,7 @@ function CategoryButton({
     category,
     setCategory,
     id,
-    title,
+    title
 }: CategoryButtonProps) {
     return (
         <div className="group flex items-center gap-1">
@@ -22,7 +22,7 @@ function CategoryButton({
             {id === "react" || id === "react-native" ? <ReactSVG /> : null}
             {id === "javascript" ? <JavascriptSVG /> : null}
             <button
-                onClick={(e) => setCategory(e.currentTarget.id)}
+                onClick={e => setCategory(e.currentTarget.id)}
                 id={id}
                 className={`py-3 text-lg font-semibold text-primary-100 transition-all duration-200 group-hover:text-white ${
                     category === id

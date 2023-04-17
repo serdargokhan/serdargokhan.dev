@@ -15,7 +15,7 @@ function ProjectItems({
     description,
     website,
     source,
-    stack,
+    stack
 }: ItemProps) {
     return (
         <article className="flex cursor-default flex-col gap-6 bg-white p-7 transition-all duration-300 hover:translate-x-2  hover:-translate-y-2 hover:shadow-primary-yellow md:hover:translate-x-4 md:hover:-translate-y-4">

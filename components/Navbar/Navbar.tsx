@@ -9,7 +9,7 @@ function Navbar() {
     return (
         <nav className="h-16 bg-primary-100">
             <div className="mx-auto w-11/12 max-w-7xl pt-6 sm:flex sm:items-center sm:justify-between">
-                <div className="hidden transition-all duration-300 hover:-translate-y-1 hover:cursor-pointer sm:inline-block">
+                <div className="hidden transition-all duration-300 hover:-translate-y-1 hover:cursor-pointer sm:flex">
                     <Image
                         src={LogoS}
                         width={30}

@@ -1,4 +1,3 @@
-// Components
 import SourceButton from "components/Utils/SourceButton";
 import WebsiteButton from "components/Utils/WebsiteButton";
 

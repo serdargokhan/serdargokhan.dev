@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html {
-        font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
-            "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-            "Helvetica Neue", sans-serif;
-    }
-}
-
-.calc-height {
-    min-height: calc(100vh - 64px);
-}
-
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 12px;

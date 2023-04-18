@@ -1,10 +1,8 @@
-import type { NextPage } from "next";
-// Components
 import FirstSection from "components/MainPage/FirstSection/FirstSection";
 import SecondSection from "components/MainPage/SecondSection/SecondSection";
 import ThirdSection from "components/MainPage/ThirdSection/ThirdSection";
 
-const Home: NextPage = () => {
+export default function Page() {
     return (
         <>
             <FirstSection />
@@ -12,6 +10,4 @@ const Home: NextPage = () => {
             <ThirdSection />
         </>
     );
-};
-
-export default Home;
+}

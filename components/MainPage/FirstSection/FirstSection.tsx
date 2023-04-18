@@ -4,7 +4,7 @@ import MainSVG from "public/FirstSection/Main.svg";
 
 function FirstSection() {
     return (
-        <main className="calc-height flex w-full items-center bg-primary-100 py-20">
+        <main className="min-h-[calc(100vh-64px)] flex w-full items-center bg-primary-100 py-20">
             <div className="mx-auto flex w-11/12 max-w-7xl items-center justify-between gap-20">
                 <div className="flex w-full cursor-default flex-col gap-3 md:w-1/2">
                     <p className="text-md text-primary-200">
@@ -17,12 +17,12 @@ function FirstSection() {
                         A passionate Front-End Developer
                     </p>
                     <p className="my-4 text-justify text-lg font-semibold text-primary-300">
-                        I'm a front-end developer and also a mechatronics
+                        I&apos;m a front-end developer and also a mechatronics
                         engineer building scalable, cross-browser compatible,
                         performant, and responsive websites located in İstanbul.
                         Feel free to take a look at my latest projects a little
-                        bit below this page. Currently, I'm producing valuable,
-                        user-friendly websites at{" "}
+                        bit below this page. Currently, I&apos;m producing
+                        valuable, user-friendly websites at{" "}
                         <a
                             href="https://www.entererp.com"
                             rel="noopener noreferrer"

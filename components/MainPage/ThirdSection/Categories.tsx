@@ -1,4 +1,3 @@
-// Components
 import CategoryButton from "./CategoryButton";
 
 interface CategoriesProps {

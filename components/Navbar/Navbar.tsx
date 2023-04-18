@@ -1,8 +1,6 @@
 import Image from "next/image";
-// Assets
 import LogoS from "public/Navbar/LogoS.svg";
 import LogoG from "public/Navbar/LogoG.svg";
-// Components
 import NavItems from "./NavItems";
 
 function Navbar() {

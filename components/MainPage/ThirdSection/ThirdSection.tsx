@@ -1,5 +1,6 @@
+"use client";
+
 import { useState } from "react";
-// Components
 import Categories from "./Categories";
 import ProjectItems from "./ProjectItems";
 
@@ -13,7 +14,7 @@ function ThirdSection() {
         >
             <div className="mx-auto w-11/12 max-w-7xl">
                 <p className="text-4xl font-bold text-white">
-                    Some Projects I've Built
+                    Some Projects I&apos;ve Built
                 </p>
                 <Categories setCategory={setCategory} category={category} />
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">

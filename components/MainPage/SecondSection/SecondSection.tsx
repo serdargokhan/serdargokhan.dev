@@ -1,8 +1,9 @@
 import Image from "next/image";
-// Assets
 import MainSVG from "public/SecondSection/Main.svg";
 
 function SecondSection() {
+    const myAge = new Date().getFullYear() - 1997;
+
     return (
         <section
             className="flex min-h-screen w-full items-center bg-primary-200 py-20"
@@ -23,9 +24,9 @@ function SecondSection() {
                     </p>
                     <p className="text-lg font-semibold text-white">
                         Hello! My name is Serdar Gökhan. I am a mechatronics
-                        engineer who graduated from Marmara University. I am 25
-                        years old. I live in İstanbul, Turkey. I started my
-                        programming journey when I was in the university.
+                        engineer who graduated from Marmara University. I am{" "}
+                        {myAge} years old. I live in İstanbul, Turkey. I started
+                        my programming journey when I was in the university.
                     </p>
                     <p className="text-lg font-semibold text-white">
                         In June 2021, I started my web development journey. I

@@ -1,4 +1,3 @@
-// Assets
 import JavascriptSVG from "components/Assets/JavascriptSVG";
 import NextjsSVG from "components/Assets/NextjsSVG";
 import ReactSVG from "components/Assets/ReactSVG";

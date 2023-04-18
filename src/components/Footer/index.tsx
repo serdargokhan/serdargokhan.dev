@@ -12,11 +12,14 @@ function Footer() {
                     <p className="text-6xl font-bold text-primary-300">
                         Contact Me
                     </p>
-                    <p className="text-justify text-lg font-semibold text-primary-300">
-                        Now, here we are in the best part. If you have any
-                        questions or you want to say just hi, feel free to
-                        contact me. I will do my best to reply as soon as
-                        possible.
+                    <p className="font-semibold text-primary-300">
+                        If you have any inquiries or would like to discuss a
+                        potential project, feel free to reach out to me through
+                        the contact email provided below. I&apos;m always open
+                        to collaboration and love working with new clients.
+                        Additionally, if you simply want to connect or have any
+                        questions about my work, don&apos;t hesitate to drop me
+                        a message. Looking forward to hearing from you soon!
                     </p>
                     <a
                         className="w-fit"

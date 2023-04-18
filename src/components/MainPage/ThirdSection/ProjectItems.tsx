@@ -1,5 +1,5 @@
-import SourceButton from "components/Utils/SourceButton";
-import WebsiteButton from "components/Utils/WebsiteButton";
+import SourceButton from "src/components/common/SourceButton";
+import WebsiteButton from "src/components/common/WebsiteButton";
 
 interface ItemProps {
     title?: string;

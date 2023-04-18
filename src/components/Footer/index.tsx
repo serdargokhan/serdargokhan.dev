@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Contact from "public/Footer/Contact.svg";
+import { NextImage } from "../common";
 
 function Footer() {
     return (
@@ -28,12 +28,7 @@ function Footer() {
                     </a>
                 </div>
                 <div className="hidden md:inline-block">
-                    <Image
-                        width={600}
-                        height={450}
-                        src={Contact}
-                        alt="Contact Me"
-                    />
+                    <NextImage width={600} height={400} src={Contact} alt="" />
                 </div>
             </div>
         </footer>

@@ -1,6 +1,4 @@
-import JavascriptSVG from "components/Assets/JavascriptSVG";
-import NextjsSVG from "components/Assets/NextjsSVG";
-import ReactSVG from "components/Assets/ReactSVG";
+import { JavascriptIcon, ReactIcon, NextIcon } from "src/icons";
 
 interface CategoryButtonProps {
     setCategory: React.Dispatch<React.SetStateAction<string>>;
@@ -17,9 +15,15 @@ function CategoryButton({
 }: CategoryButtonProps) {
     return (
         <div className="group flex items-center gap-1">
-            {id === "next" ? <NextjsSVG /> : null}
-            {id === "react" || id === "react-native" ? <ReactSVG /> : null}
-            {id === "javascript" ? <JavascriptSVG /> : null}
+            {id === "next" && (
+                <NextIcon className="w-6 h-6 fill-primary-100 transition group-hover:fill-white" />
+            )}
+            {(id === "react" || id === "react-native") && (
+                <ReactIcon className="w-6 h-6 fill-primary-100 transition group-hover:fill-white" />
+            )}
+            {id === "javascript" && (
+                <JavascriptIcon className="w-6 h-6 fill-primary-100 transition group-hover:fill-white" />
+            )}
             <button
                 onClick={e => setCategory(e.currentTarget.id)}
                 id={id}

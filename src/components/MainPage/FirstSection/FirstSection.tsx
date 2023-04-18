@@ -1,6 +1,5 @@
-import Image from "next/image";
-// Assets
 import MainSVG from "public/FirstSection/Main.svg";
+import { NextImage } from "src/components/common";
 
 function FirstSection() {
     return (
@@ -35,12 +34,12 @@ function FirstSection() {
                     </p>
                 </div>
                 <div className="hidden md:inline-block">
-                    <Image
+                    <NextImage
                         src={MainSVG}
                         width={600}
-                        height={450}
+                        height={400}
                         priority
-                        alt="Main Portfolio Introducer"
+                        alt=""
                     />
                 </div>
             </div>

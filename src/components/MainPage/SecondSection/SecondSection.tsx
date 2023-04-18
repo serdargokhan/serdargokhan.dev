@@ -1,5 +1,5 @@
-import Image from "next/image";
 import MainSVG from "public/SecondSection/Main.svg";
+import { NextImage } from "src/components/common";
 
 function SecondSection() {
     const myAge = new Date().getFullYear() - 1997;
@@ -11,12 +11,7 @@ function SecondSection() {
         >
             <div className=" mx-auto flex w-11/12 max-w-7xl cursor-default items-center justify-between gap-20">
                 <div className="hidden md:inline-block">
-                    <Image
-                        src={MainSVG}
-                        width={600}
-                        height={450}
-                        alt="About Me Section"
-                    />
+                    <NextImage src={MainSVG} width={600} height={400} alt="" />
                 </div>
                 <div className="flex w-full flex-col gap-6 text-justify md:w-1/2">
                     <p className="text-6xl font-bold text-primary-100">

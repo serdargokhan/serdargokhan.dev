@@ -2,8 +2,9 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import Footer from "components/Footer/Footer";
-import Navbar from "components/Navbar/Navbar";
+import Navbar from "src/components/Navbar";
+import Footer from "src/components/Footer";
+import { cn } from "src/utils";
 
 const nunitoFont = Nunito({
     subsets: ["latin", "latin-ext"],
@@ -12,7 +13,7 @@ const nunitoFont = Nunito({
 
 export default function RootLayout({ children }: { children: ReactNode }) {
     return (
-        <html className={`${nunitoFont.className} scroll-smooth`} lang="en">
+        <html className={cn("scroll-smooth", nunitoFont.className)} lang="en">
             <body>
                 <Navbar />
                 {children}
@@ -23,18 +24,44 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 }
 
 export const metadata: Metadata = {
-    title: "Serdar Gökhan's Portfolio",
+    title: {
+        default: "Portfolio",
+        template: "%s | Serdar Gökhan"
+    },
     description:
         "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites located in İstanbul.",
     icons: {
-        icon: "/Navbar/LogoG.svg"
+        other: [
+            {
+                url: "/favicon-32x32.png",
+                sizes: "32x32",
+                type: "image/png"
+            },
+            {
+                url: "/favicon-16x16.png",
+                sizes: "16x16",
+                type: "image/png"
+            }
+        ],
+        apple: [
+            "/apple-touch-icon.png",
+            {
+                url: "/safari-pinned-tab.svg",
+                rel: "mask-icon"
+            }
+        ]
+    },
+    manifest: "/site.webmanifest",
+    twitter: {
+        card: "summary_large_image",
+        creator: "@serdarrgokhann"
     },
     openGraph: {
-        title: "Serdar Gökhan Portfolio",
+        title: "Serdar Gökhan",
         description:
             "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites located in İstanbul.",
         url: "https://serdargokhan.dev",
-        siteName: "Serdar Gökhan Portfolio",
+        siteName: "Serdar Gökhan",
         images: [
             {
                 url: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=90",

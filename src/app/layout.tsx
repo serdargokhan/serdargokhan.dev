@@ -25,33 +25,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
 export const metadata: Metadata = {
     title: {
-        default: "Portfolio",
+        default: "Portfolio | Serdar Gökhan",
         template: "%s | Serdar Gökhan"
     },
     description:
         "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites located in İstanbul.",
     icons: {
+        shortcut: "/favicon.ico",
+        apple: "static/apple-icon.png",
         other: [
             {
-                url: "/favicon-32x32.png",
+                url: "static/favicon-32x32.png",
                 sizes: "32x32",
                 type: "image/png"
             },
             {
-                url: "/favicon-16x16.png",
+                url: "static/favicon-16x16.png",
                 sizes: "16x16",
                 type: "image/png"
             }
-        ],
-        apple: [
-            "/apple-touch-icon.png",
-            {
-                url: "/safari-pinned-tab.svg",
-                rel: "mask-icon"
-            }
         ]
     },
-    manifest: "/site.webmanifest",
     twitter: {
         card: "summary_large_image",
         creator: "@serdarrgokhann"

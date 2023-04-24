@@ -1,8 +1,8 @@
 import { ExternalLinkIcon } from "src/icons";
 
-interface WebsiteButtonProps {
+type WebsiteButtonProps = {
     href: string;
-}
+};
 
 function WebsiteButton({ href }: WebsiteButtonProps) {
     return (

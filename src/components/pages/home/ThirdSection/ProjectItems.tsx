@@ -1,13 +1,13 @@
 import SourceButton from "src/components/common/SourceButton";
 import WebsiteButton from "src/components/common/WebsiteButton";
 
-interface ItemProps {
+type ItemProps = {
     title?: string;
     description?: string;
     website: string;
     source: string;
     stack?: JSX.Element;
-}
+};
 
 function ProjectItems({
     title,
@@ -17,7 +17,7 @@ function ProjectItems({
     stack
 }: ItemProps) {
     return (
-        <article className="flex cursor-default flex-col gap-6 bg-white p-7 transition-all duration-300 hover:translate-x-2  hover:-translate-y-2 hover:shadow-primary-yellow md:hover:translate-x-4 md:hover:-translate-y-4">
+        <article className="flex cursor-default flex-col gap-6 bg-white p-7 transition duration-300 hover:translate-x-2 hover:-translate-y-2 hover:shadow-primary-100 md:hover:translate-x-4 md:hover:-translate-y-4">
             <p className="w-fit border bg-primary-100 p-2 text-center text-primary-300">
                 {title}
             </p>

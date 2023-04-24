@@ -1,12 +1,12 @@
 import { JavascriptIcon, ReactIcon, NextIcon } from "src/icons";
 import { cn } from "src/utils";
 
-interface CategoryButtonProps {
+type CategoryButtonProps = {
     setCategory: React.Dispatch<React.SetStateAction<string>>;
     category: string;
     id: string;
     title: string;
-}
+};
 
 function CategoryButton({
     category,

@@ -2,9 +2,10 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
-import Navbar from "src/components/Navbar";
-import Footer from "src/components/Footer";
+import { useLocale } from "next-intl";
 import { cn } from "src/utils";
+import Navbar from "src/components/layouts/Navbar";
+import Footer from "src/components/layouts/Footer";
 
 const nunitoFont = Nunito({
     subsets: ["latin", "latin-ext"],
@@ -12,11 +13,16 @@ const nunitoFont = Nunito({
 });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+    const locale = useLocale();
+
     return (
-        <html className={cn("scroll-smooth", nunitoFont.className)} lang="en">
+        <html
+            className={cn("scroll-smooth", nunitoFont.className)}
+            lang={locale}
+        >
             <body>
                 <Navbar />
-                {children}
+                <main>{children}</main>
                 <Footer />
             </body>
         </html>

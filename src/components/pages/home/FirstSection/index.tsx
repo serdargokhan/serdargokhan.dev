@@ -6,7 +6,7 @@ function FirstSection() {
     const t = useTranslations("Home.FirstSection");
 
     return (
-        <section className="min-h-[calc(100vh-64px)] flex items-center bg-primary-100 py-20">
+        <section className="min-h-[calc(100vh-64px)] flex items-center bg-main-pattern py-20">
             <div className="flex items-center justify-between gap-20 container">
                 <div className="grid cursor-default gap-3 md:w-1/2">
                     <span className="text-primary-200">{t("greeting")}</span>
@@ -17,7 +17,10 @@ function FirstSection() {
                         {t("title")}
                     </p>
                     <p className="font-semibold text-primary-300">
-                        {t.rich("description", {
+                        {t("paragraph-one")}
+                    </p>
+                    <p className="font-semibold text-primary-300">
+                        {t.rich("paragraph-two", {
                             link: children => (
                                 <a
                                     href="https://www.entererp.com"

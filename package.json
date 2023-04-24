@@ -3,10 +3,10 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev --turbo",
+        "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "prettier --write ."
+        "lint": "prettier --write ./src"
     },
     "dependencies": {
         "clsx": "^1.2.1",

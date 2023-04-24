@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import ContactImage from "public/images/pages/home/contact.svg";
-import { NextImage } from "src/components/common";
+import ContactImage from "@public/images/pages/home/contact.svg";
+import { NextImage } from "@src/components/common";
 
 function FourthSection() {
     const t = useTranslations("Home.FourthSection");

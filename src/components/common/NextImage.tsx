@@ -1,6 +1,6 @@
 import type { ImageProps, StaticImageData } from "next/image";
 import Image from "next/image";
-import { cn } from "src/utils";
+import { cn } from "@src/utils";
 
 interface NextImageProps extends ImageProps {
     src: string | StaticImageData;

@@ -4,8 +4,8 @@ import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { useLocale } from "next-intl";
 import { cn } from "src/utils";
-import Navbar from "src/components/layouts/Navbar";
-import Footer from "src/components/layouts/Footer";
+import Navbar from "@src/components/layouts/Navbar";
+import Footer from "@src/components/layouts/Footer";
 
 const nunitoFont = Nunito({
     subsets: ["latin", "latin-ext"],

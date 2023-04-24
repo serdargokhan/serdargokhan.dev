@@ -1,4 +1,4 @@
-import { GithubIcon } from "src/icons";
+import { GithubIcon } from "@src/icons";
 
 type SourceButtonProps = {
     href: string;

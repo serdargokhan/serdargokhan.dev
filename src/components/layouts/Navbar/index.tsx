@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SiteLogo from "public/images/common/site-logo.svg";
+import SiteLogo from "@public/images/common/site-logo.svg";
 import NavLinks from "./NavLinks";
 import { NextImage } from "../../common";
 

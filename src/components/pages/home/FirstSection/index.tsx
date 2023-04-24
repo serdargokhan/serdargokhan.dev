@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import GreetingImage from "public/images/pages/home/greeting.svg";
-import { NextImage } from "src/components/common";
+import GreetingImage from "@public/images/pages/home/greeting.svg";
+import { NextImage } from "@src/components/common";
 
 function FirstSection() {
     const t = useTranslations("Home.FirstSection");

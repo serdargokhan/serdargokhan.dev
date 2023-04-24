@@ -1,5 +1,4 @@
-import SourceButton from "src/components/common/SourceButton";
-import WebsiteButton from "src/components/common/WebsiteButton";
+import { SourceButton, WebsiteButton } from "@src/components/common";
 
 type ItemProps = {
     title?: string;

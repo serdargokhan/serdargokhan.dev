@@ -1,5 +1,5 @@
-import { JavascriptIcon, ReactIcon, NextIcon } from "src/icons";
-import { cn } from "src/utils";
+import { JavascriptIcon, ReactIcon, NextIcon } from "@src/icons";
+import { cn } from "@src/utils";
 
 type CategoryButtonProps = {
     setCategory: React.Dispatch<React.SetStateAction<string>>;

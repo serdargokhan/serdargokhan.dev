@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from "src/icons";
+import { ExternalLinkIcon } from "@src/icons";
 
 type WebsiteButtonProps = {
     href: string;

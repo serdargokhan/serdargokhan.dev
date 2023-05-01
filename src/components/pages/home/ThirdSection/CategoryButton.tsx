@@ -21,12 +21,12 @@ function CategoryButton({
                     id={id}
                     onClick={e => setCategory(e.currentTarget.id)}
                     className={cn(
-                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition relative border-b-[3px] border-transparent",
+                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition duration-200 relative border-b-[3px] border-transparent",
                         category === id &&
                             "border-primary-100 hover:border-white"
                     )}
                 >
-                    <NextIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white" />
+                    <NextIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white transition duration-200" />
                     <span>{title}</span>
                 </button>
             )}
@@ -35,12 +35,12 @@ function CategoryButton({
                     id={id}
                     onClick={e => setCategory(e.currentTarget.id)}
                     className={cn(
-                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition relative border-b-[3px] border-transparent",
+                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition duration-200 relative border-b-[3px] border-transparent",
                         category === id &&
                             "border-primary-100 hover:border-white"
                     )}
                 >
-                    <ReactIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white" />
+                    <ReactIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white transition duration-200" />
                     <span>{title}</span>
                 </button>
             )}
@@ -49,12 +49,12 @@ function CategoryButton({
                     id={id}
                     onClick={e => setCategory(e.currentTarget.id)}
                     className={cn(
-                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition relative border-b-[3px] border-transparent",
+                        "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-white transition duration-200 relative border-b-[3px] border-transparent",
                         category === id &&
                             "border-primary-100 hover:border-white"
                     )}
                 >
-                    <JavascriptIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white" />
+                    <JavascriptIcon className="w-6 h-6 fill-primary-100 group-hover:fill-white transition duration-200" />
                     <span>{title}</span>
                 </button>
             )}

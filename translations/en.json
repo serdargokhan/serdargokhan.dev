@@ -1,0 +1,29 @@
+{
+    "Home": {
+        "FirstSection": {
+            "greeting": "Hey there, my name is",
+            "name": "Serdar Gökhan",
+            "title": "A passionate Front-End Developer",
+            "paragraph-one": "I'm a front-end developer and mechatronics engineer based in İstanbul. I specialize in creating websites that are not only visually stunning but also perform smoothly across different browsers and devices.",
+            "paragraph-two": "If you scroll down a bit, you can check out some of my recent projects and see what I've been up to. Right now, I'm working at <link>EnterERP</link> and developing websites that are intuitive and easy to use while delivering real value to our customers."
+        },
+        "SecondSection": {
+            "title": "About Me",
+            "paragraph-one": "Greetings! My name is Serdar Gökhan, and I am a mechatronics engineer who graduated from Marmara University. Currently residing in İstanbul, Turkey, I began my programming journey while still in university, and in June 2021, I set out to embark on a web development journey.",
+            "paragraph-two": "I started by learning the fundamentals of HTML, CSS, and JavaScript, and while it was challenging, I took the time to ensure a strong understanding of these languages. This foundation has allowed me to quickly pick up more advanced frameworks and libraries, such as ReactJS, NextJS, TailwindCSS, and TypeScript.",
+            "paragraph-three": "Along the way, I have developed numerous projects, and my goal is to continue to hone my skills and become an even better developer. I am excited to see where this journey takes me, as there is always so much to explore in the ever-changing world of web development."
+        },
+        "FourthSection": {
+            "title": "Contact Me",
+            "paragraph-one": "If you have any inquiries or would like to discuss a potential project, feel free to reach out to me through the contact email provided below. I'm always open to collaboration and love working with new clients.",
+            "paragraph-two": "Additionally, if you simply want to connect or have any questions about my work, don't hesitate to drop me a message. Looking forward to hearing from you soon!",
+            "cta": "Say Hello!"
+        }
+    },
+    "Navigation": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
+        "resume": "Resume"
+    }
+}

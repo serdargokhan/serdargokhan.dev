@@ -9,13 +9,13 @@ function ThirdSection() {
 
     return (
         <section
-            className="min-h-full w-full bg-primary-300 py-20"
+            className="min-h-screen bg-primary-300 py-20 flex items-center"
             id="projects"
         >
-            <div className="mx-auto w-11/12 max-w-7xl">
-                <p className="text-4xl font-bold text-white">
+            <div className="container">
+                <h2 className="text-4xl font-bold text-white">
                     Some Projects I&apos;ve Built
-                </p>
+                </h2>
                 <Categories setCategory={setCategory} category={category} />
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">
                     {category === "next" && (

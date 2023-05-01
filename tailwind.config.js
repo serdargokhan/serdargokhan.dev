@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}"
@@ -12,13 +14,24 @@ module.exports = {
         "primary-400": "#fff0e5"
       },
       boxShadow: {
-        "primary-yellow": "-10px 10px 0px 5px rgba(255,211,0,1)",
-        "secondary-yellow": "0px 0px 15px 4px rgba(255,211,0,1)"
+        "primary-100": "-10px 10px 0px 5px #ffd300",
+        "primary-400": "0px 0px 10px 2px #fff0e5"
       }
     },
   },
   future: {
     hoverOnlyWhenSupported: true,
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          maxWidth: '1280px',
+          width: '90%',
+          marginLeft: 'auto',
+          marginRight: 'auto'
+        },
+      });
+    })
+  ],
 }

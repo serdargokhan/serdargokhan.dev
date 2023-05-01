@@ -1,8 +1,8 @@
-import { GithubIcon } from "src/icons";
+import { GithubIcon } from "@src/icons";
 
-interface SourceButtonProps {
+type SourceButtonProps = {
     href: string;
-}
+};
 
 function SourceButton({ href }: SourceButtonProps) {
     return (

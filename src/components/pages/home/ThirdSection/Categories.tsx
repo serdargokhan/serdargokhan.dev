@@ -1,9 +1,9 @@
 import CategoryButton from "./CategoryButton";
 
-interface CategoriesProps {
+type CategoriesProps = {
     setCategory: React.Dispatch<React.SetStateAction<string>>;
     category: string;
-}
+};
 
 function Categories({ setCategory, category }: CategoriesProps) {
     return (

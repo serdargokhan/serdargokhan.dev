@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-main-pattern {
+    background: linear-gradient(
+            45deg,
+            transparent 48%,
+            #ffd30040 49% 51%,
+            transparent 51%
+        ),
+        linear-gradient(
+            -45deg,
+            transparent 48%,
+            #ffd30040 49% 51%,
+            transparent 51%
+        );
+    background-size: 3rem 3rem;
+    background-color: #fff0e5;
+    background-position: center;
+}

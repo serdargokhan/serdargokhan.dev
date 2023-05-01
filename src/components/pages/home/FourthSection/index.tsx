@@ -16,7 +16,10 @@ function FourthSection() {
                         {t("title")}
                     </h2>
                     <p className="font-semibold text-primary-300">
-                        {t("description")}
+                        {t("paragraph-one")}
+                    </p>
+                    <p className="font-semibold text-primary-300">
+                        {t("paragraph-two")}
                     </p>
                     <a
                         className="rounded-full border-2 border-primary-200 bg-primary-200 px-6 py-3 text-white transition-all hover:bg-primary-400 hover:text-primary-300 w-fit"

@@ -15,7 +15,8 @@
         },
         "FourthSection": {
             "title": "Contact Me",
-            "description": "If you have any inquiries or would like to discuss a potential project, feel free to reach out to me through the contact email provided below. I'm always open to collaboration and love working with new clients. Additionally, if you simply want to connect or have any questions about my work, don't hesitate to drop me a message. Looking forward to hearing from you soon!",
+            "paragraph-one": "If you have any inquiries or would like to discuss a potential project, feel free to reach out to me through the contact email provided below. I'm always open to collaboration and love working with new clients.",
+            "paragraph-two": "Additionally, if you simply want to connect or have any questions about my work, don't hesitate to drop me a message. Looking forward to hearing from you soon!",
             "cta": "Say Hello!"
         }
     },

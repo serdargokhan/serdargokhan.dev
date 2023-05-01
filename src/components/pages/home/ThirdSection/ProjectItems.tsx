@@ -23,7 +23,9 @@ function ProjectItems({
             <p className="flex-1 text-justify text-primary-300">
                 {description}
             </p>
-            <ul className="flex flex-wrap gap-4 text-primary-200">{stack}</ul>
+            <ul className="flex flex-wrap gap-4 text-primary-200 list-['#']">
+                {stack}
+            </ul>
             <div className="flex justify-center gap-5">
                 <WebsiteButton href={website} />
                 <SourceButton href={source} />

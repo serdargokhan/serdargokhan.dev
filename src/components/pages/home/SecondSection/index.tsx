@@ -19,7 +19,7 @@ function SecondSection() {
                         alt=""
                     />
                 </div>
-                <div className="grid gap-6 md:w-1/2">
+                <div className="grid gap-4 md:w-1/2">
                     <h2 className="text-6xl font-bold text-primary-100">
                         {t("title")}
                     </h2>

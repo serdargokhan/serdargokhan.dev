@@ -11,7 +11,7 @@ function FourthSection() {
             id="contact"
         >
             <div className="flex container cursor-default items-center justify-between gap-20 py-16">
-                <div className="grid gap-6 md:w-1/2">
+                <div className="grid gap-4 md:w-1/2">
                     <h2 className="text-6xl font-bold text-primary-300">
                         {t("title")}
                     </h2>

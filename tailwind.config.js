@@ -8,10 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-100": "#ffd300",
-        "primary-200": "#3a10e5",
-        "primary-300": "#10162f",
-        "primary-400": "#fff0e5"
+        primary: {
+          100: "#ffd300",
+          200: "#3a10e5",
+          300: "#10162f",
+          400: "#fff0e5"
+        }
       },
       boxShadow: {
         "primary-100": "-10px 10px 0px 5px #ffd300",

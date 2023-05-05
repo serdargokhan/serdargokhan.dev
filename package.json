@@ -10,19 +10,19 @@
     },
     "dependencies": {
         "clsx": "^1.2.1",
-        "next": "13.4.0",
+        "next": "13.4.1",
         "next-intl": "2.14.0-beta.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "tailwind-merge": "^1.12.0"
     },
     "devDependencies": {
-        "@types/node": "18.16.3",
+        "@types/node": "20.0.0",
         "@types/react": "18.2.5",
-        "@types/react-dom": "18.2.3",
+        "@types/react-dom": "18.2.4",
         "autoprefixer": "^10.4.14",
         "eslint": "8.39.0",
-        "eslint-config-next": "13.4.0",
+        "eslint-config-next": "13.4.1",
         "postcss": "^8.4.23",
         "prettier": "^2.8.8",
         "prettier-plugin-tailwindcss": "^0.2.8",

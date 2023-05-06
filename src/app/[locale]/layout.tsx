@@ -1,5 +1,6 @@
-import "./globals.css";
+import "../globals.css";
 import { Nunito } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { ReactNode } from "react";
 import type { Metadata } from "next";
 import { useLocale } from "next-intl";
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 <Navbar />
                 <main>{children}</main>
                 <Footer />
+                <Analytics />
             </body>
         </html>
     );
@@ -51,6 +53,28 @@ export const metadata: Metadata = {
                 type: "image/png"
             }
         ]
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1
+        }
+    },
+    alternates: {
+        languages: {
+            "x-default": "https://serdargokhan.dev",
+            en: "https://serdargokhan.dev/en",
+            tr: "https://serdargokhan.dev/tr"
+        },
+        canonical: "https://serdargokhan.dev"
+    },
+    verification: {
+        google: "UJthXaWw4SK7do_wKDjzQXss3tPHWfF0dXCBjfQrZek"
     },
     twitter: {
         card: "summary_large_image",

@@ -19,19 +19,13 @@ function SecondSection() {
                         alt=""
                     />
                 </div>
-                <div className="grid gap-4 md:w-1/2">
+                <div className="grid gap-4 md:w-1/2 text-white font-semibold">
                     <h2 className="text-6xl font-bold text-primary-100">
                         {t("title")}
                     </h2>
-                    <p className="font-semibold text-white">
-                        {t("paragraph-one")}
-                    </p>
-                    <p className="font-semibold text-white">
-                        {t("paragraph-two")}
-                    </p>
-                    <p className="font-semibold text-white">
-                        {t("paragraph-three")}
-                    </p>
+                    <p>{t("paragraph-one")}</p>
+                    <p>{t("paragraph-two")}</p>
+                    <p>{t("paragraph-three")}</p>
                 </div>
             </div>
         </section>

@@ -8,18 +8,12 @@ function FirstSection() {
     return (
         <section className="min-h-[calc(100vh-64px)] flex items-center bg-main-pattern py-20">
             <div className="flex items-center justify-between gap-20 container">
-                <div className="grid cursor-default gap-4 md:w-1/2">
+                <div className="grid cursor-default gap-4 md:w-1/2 text-primary-300">
                     <span className="text-primary-200">{t("greeting")}</span>
-                    <h1 className="text-6xl font-bold text-primary-300">
-                        {t("name")}
-                    </h1>
-                    <p className="text-3xl italic text-primary-300">
-                        {t("title")}
-                    </p>
-                    <p className="font-semibold text-primary-300">
-                        {t("paragraph-one")}
-                    </p>
-                    <p className="font-semibold text-primary-300">
+                    <h1 className="text-6xl font-bold">{t("name")}</h1>
+                    <p className="text-3xl italic">{t("title")}</p>
+                    <p className="font-semibold">{t("paragraph-one")}</p>
+                    <p className="font-semibold">
                         {t.rich("paragraph-two", {
                             link: children => (
                                 <a

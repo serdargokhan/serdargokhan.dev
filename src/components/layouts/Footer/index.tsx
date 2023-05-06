@@ -17,6 +17,7 @@ function Footer() {
                     <Label htmlFor="lang">TR</Label>
                     <Switch
                         id="lang"
+                        aria-label="Locale Switcher"
                         className="bg-primary-100 border-white [&>span]:bg-primary-300"
                         defaultChecked={pathname !== "/tr"}
                         onCheckedChange={checkedValue => {

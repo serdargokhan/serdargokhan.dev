@@ -7,15 +7,16 @@ function Navbar() {
         <nav className="h-16 bg-primary-300 flex items-center sticky top-0 border-b-2 border-primary-100 z-50">
             <div className="container flex items-center justify-between">
                 <a
-                    href="#"
                     className="bg-primary-100 p-1 rounded-full hover:shadow-primary-400 transition"
+                    href="#"
+                    title=""
                 >
                     <NextImage
                         width={28}
                         height={28}
                         src={SiteLogo}
                         priority
-                        alt=""
+                        alt="Portfolio Home"
                     />
                 </a>
                 <NavLinks />

@@ -11,7 +11,7 @@ function ThirdSection() {
 
     return (
         <section
-            className="min-h-screen bg-primary-300 py-20 grid"
+            className="grid min-h-screen bg-primary-300 py-20"
             id="projects"
         >
             <div className="container">
@@ -26,12 +26,12 @@ function ThirdSection() {
                             key={categoryButton.id}
                             onClick={() => setCategory(categoryButton.id)}
                             className={cn(
-                                "group flex items-center gap-1.5 py-2 text-lg font-semibold text-primary-100 hover:text-primary-400 transition relative border-b-[3px] border-transparent",
+                                "group relative flex items-center gap-1.5 border-b-[3px] border-transparent py-2 text-lg font-semibold text-primary-100 transition hover:text-primary-400",
                                 category === categoryButton.id &&
                                     "border-primary-400 text-primary-400 [&>svg]:fill-primary-400"
                             )}
                         >
-                            <categoryButton.icon className="group-hover:fill-primary-400 transition w-6 h-6 fill-primary-100" />
+                            <categoryButton.icon className="h-6 w-6 fill-primary-100 transition group-hover:fill-primary-400" />
                             <span>{categoryButton.title}</span>
                         </button>
                     ))}

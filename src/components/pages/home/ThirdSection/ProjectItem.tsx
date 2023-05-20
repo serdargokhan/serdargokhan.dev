@@ -9,7 +9,7 @@ function ProjectItem({
     techStacks
 }: ProjectItemProps) {
     return (
-        <article className="flex cursor-default flex-col gap-6 bg-white p-6 text-primary-300 transition duration-300 hover:shadow-primary-100 hover:translate-x-4 hover:-translate-y-4">
+        <article className="flex cursor-default flex-col gap-6 bg-white p-6 text-primary-300 transition duration-300 hover:-translate-y-4 hover:translate-x-4 hover:shadow-primary-100">
             <h3 className="bg-primary-100 p-2 text-center font-semibold">
                 {title}
             </h3>
@@ -19,7 +19,7 @@ function ProjectItem({
                     <li key={index}>{techStack}</li>
                 ))}
             </ul>
-            <div className="flex justify-end mt-auto gap-4">
+            <div className="mt-auto flex justify-end gap-4">
                 <WebsiteButton href={websiteLink} />
                 <SourceButton href={sourceLink} />
             </div>

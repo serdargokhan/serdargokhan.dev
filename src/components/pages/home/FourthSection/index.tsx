@@ -10,13 +10,13 @@ function FourthSection() {
             className="flex min-h-[calc(100vh-64px)] items-center bg-primary-400"
             id="contact"
         >
-            <div className="flex container cursor-default items-center justify-between gap-20 py-16">
-                <div className="grid gap-4 md:w-1/2 text-primary-300 font-semibold">
+            <div className="container flex cursor-default items-center justify-between gap-20 py-16">
+                <div className="grid gap-4 font-semibold text-primary-300 md:w-1/2">
                     <h2 className="text-6xl font-bold">{t("title")}</h2>
                     <p>{t("paragraph-one")}</p>
                     <p>{t("paragraph-two")}</p>
                     <a
-                        className="rounded-full border-2 border-primary-200 bg-primary-200 px-6 py-3 text-white transition-all hover:bg-primary-400 hover:text-primary-300 w-fit"
+                        className="w-fit rounded-full border-2 border-primary-200 bg-primary-200 px-6 py-3 text-white transition-all hover:bg-primary-400 hover:text-primary-300"
                         href="mailto:gokhan_bakirci_53@hotmail.com?subject=Hello!"
                     >
                         {t("cta")}

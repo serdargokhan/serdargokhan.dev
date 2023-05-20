@@ -4,7 +4,7 @@ function NavItems() {
     const t = useTranslations("Navigation");
 
     return (
-        <ul className="flex items-center justify-between font-semibold gap-2 sm:gap-4 text-primary-400">
+        <ul className="flex items-center justify-between gap-2 font-semibold text-primary-400 sm:gap-4">
             <li className="cursor-pointer hover:text-primary-100 hover:underline hover:decoration-2 hover:underline-offset-4">
                 <a href="#about">{t("about")}</a>
             </li>

@@ -10,7 +10,7 @@ function SecondSection() {
             className="flex min-h-screen items-center bg-primary-200 py-20"
             id="about"
         >
-            <div className="flex container cursor-default items-center justify-between gap-20">
+            <div className="container flex cursor-default items-center justify-between gap-20">
                 <div className="hidden md:inline-block">
                     <NextImage
                         src={AboutMeImage}
@@ -19,7 +19,7 @@ function SecondSection() {
                         alt=""
                     />
                 </div>
-                <div className="grid gap-4 md:w-1/2 text-white font-semibold">
+                <div className="grid gap-4 font-semibold text-white md:w-1/2">
                     <h2 className="text-6xl font-bold text-primary-100">
                         {t("title")}
                     </h2>

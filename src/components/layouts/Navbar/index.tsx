@@ -4,10 +4,10 @@ import NavLinks from "./NavLinks";
 
 function Navbar() {
     return (
-        <nav className="h-16 bg-primary-300 flex items-center sticky top-0 border-b-2 border-primary-100 z-50">
+        <nav className="sticky top-0 z-50 flex h-16 items-center border-b-2 border-primary-100 bg-primary-300">
             <div className="container flex items-center justify-between">
                 <a
-                    className="bg-primary-100 p-1 rounded-full hover:shadow-primary-400 transition"
+                    className="rounded-full bg-primary-100 p-1 transition hover:shadow-primary-400"
                     href="#"
                     title=""
                 >

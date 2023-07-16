@@ -54,6 +54,7 @@ export default async function RootLayout({
 }
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://serdargokhan.dev"),
     title: {
         default: "Portfolio | Serdar Gökhan",
         template: "%s | Serdar Gökhan"

@@ -1,12 +1,11 @@
 "use client";
 
+import { useRouter, usePathname } from "next/navigation";
 import { Label } from "@src/components/ui/Label";
 import { Switch } from "@src/components/ui/Switch";
-import { useRouter, usePathname } from "next/navigation";
 
 function Footer() {
     const router = useRouter();
-
     const pathname = usePathname();
 
     return (

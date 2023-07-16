@@ -1,3 +1,5 @@
+"use client";
+
 import { NextImage } from "@src/components/common";
 import SiteLogo from "@public/images/common/site-logo.svg";
 import NavLinks from "./NavLinks";

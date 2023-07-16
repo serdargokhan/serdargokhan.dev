@@ -2,24 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    -webkit-tap-highlight-color: transparent;
+@layer base {
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
 }
 
-.bg-main-pattern {
-    background: linear-gradient(
-            45deg,
-            transparent 48%,
-            #ffd30040 49% 51%,
-            transparent 51%
-        ),
-        linear-gradient(
-            -45deg,
-            transparent 48%,
-            #ffd30040 49% 51%,
-            transparent 51%
-        );
-    background-size: 3rem 3rem;
-    background-color: #fff0e5;
-    background-position: center;
+@layer components {
+    .bg-hero-pattern {
+        background: linear-gradient(
+                45deg,
+                transparent 48%,
+                #ffd30040 49% 51%,
+                transparent 51%
+            ),
+            linear-gradient(
+                -45deg,
+                transparent 48%,
+                #ffd30040 49% 51%,
+                transparent 51%
+            );
+        background-size: 3rem 3rem;
+        background-color: #fff0e5;
+        background-position: center;
+    }
 }

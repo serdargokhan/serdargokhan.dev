@@ -1,5 +1,5 @@
 import { SourceButton, WebsiteButton } from "@src/components/common";
-import { ProjectItem as ProjectItemProps } from "./projectItems";
+import type { ProjectItem as ProjectItemProps } from "./projectItems";
 
 function ProjectItem({
     title,

@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import AboutMeImage from "@public/images/pages/home/about-me.svg";
 import { NextImage } from "@src/components/common";

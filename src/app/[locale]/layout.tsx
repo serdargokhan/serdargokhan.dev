@@ -1,9 +1,10 @@
 import "../globals.css";
-import { Nunito } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
-import { useLocale } from "next-intl";
+import { notFound } from "next/navigation";
+import { Nunito } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { Analytics } from "@vercel/analytics/react";
 import { cn } from "src/utils";
 import Navbar from "@src/components/layouts/Navbar";
 import Footer from "@src/components/layouts/Footer";
@@ -13,8 +14,26 @@ const nunitoFont = Nunito({
     weight: "variable"
 });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
-    const locale = useLocale();
+export function generateStaticParams() {
+    return [{ locale: "en" }, { locale: "tr" }];
+}
+
+type RootLayoutProps = {
+    children: ReactNode;
+    params: { locale: string };
+};
+
+export default async function RootLayout({
+    children,
+    params: { locale }
+}: RootLayoutProps) {
+    let messages;
+    try {
+        messages = (await import(`../../../translations/${locale}.json`))
+            .default;
+    } catch (error) {
+        notFound();
+    }
 
     return (
         <html
@@ -22,9 +41,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             lang={locale}
         >
             <body>
-                <Navbar />
-                <main>{children}</main>
-                <Footer />
+                <NextIntlClientProvider locale={locale} messages={messages}>
+                    <Navbar />
+                    <main>{children}</main>
+                    <Footer />
+                </NextIntlClientProvider>
+
                 <Analytics />
             </body>
         </html>

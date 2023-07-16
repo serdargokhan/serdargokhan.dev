@@ -1,13 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { cn } from "@src/utils";
-import ProjectItem from "./ProjectItem";
 import { Category, projectItems } from "./projectItems";
 import { categoryButtons } from "./categoryButtons";
+import ProjectItem from "./ProjectItem";
 
 function ThirdSection() {
     const [category, setCategory] = useState<Category>("nextjs");
+
+    const t = useTranslations("Home.ThirdSection");
 
     return (
         <section
@@ -15,9 +18,7 @@ function ThirdSection() {
             id="projects"
         >
             <div className="container">
-                <h2 className="text-4xl font-bold text-white">
-                    Some Projects I&apos;ve Built
-                </h2>
+                <h2 className="text-4xl font-bold text-white">{t("title")}</h2>
 
                 <div className="my-10 flex flex-wrap justify-center gap-8">
                     {categoryButtons.map(categoryButton => (

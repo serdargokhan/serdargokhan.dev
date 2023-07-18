@@ -14,7 +14,62 @@
             "paragraph-three": "Öğrenme serüvenim boyunca çok sayıda proje geliştirdim. Amacım, becerilerimi geliştirmeye devam etmek ve daha da iyi bir geliştirici olmak. Sürekli değişen web geliştirme dünyasında her zaman keşfedilecek bir çok şey olduğu için bu yolculuğun beni nereye götüreceğini görmekten heyecan duyuyorum."
         },
         "ThirdSection": {
-            "title": "Yaptığım Bazı Projeler"
+            "title": "Yaptığım Bazı Projeler",
+            "projects": {
+                "nextjs": {
+                    "microsoft-todo-clone": {
+                        "description": "This is the biggest project that I have in my portfolio. It took me so long even to get the project so far. I could not finish it due to work but I have done a lot. I owe a lot of new knowledge to this project. In this project I have used TypeScript, SCSS, Firebase Authentication, and MongoDB. I learnt MongoDB from scratch with this project."
+                    },
+                    "add-your-website": {
+                        "description": "I have developed this project as a part of a tutorial from Youtube thanks to Lee Robinson for inspiration. I have used Chakra UI, useSWR, and Skeleton loading for the first time with this project. I also stored the user information on Firebase Firestore and login was implemented with Firebase authentication. It has Github login authentication."
+                    },
+                    "shopify-clone": {
+                        "description": "I have completed this project and I got inspired from Shopify website. It is kind of e-commerce website. There are sign in and sign up proccess. User can create a product, delete a product if they created it, and also add to cart. I used minimal workflow with this project and no extra framework."
+                    }
+                },
+                "reactjs": {
+                    "create-blog-posts": {
+                        "description": "I have completed this blog website. It has sign in and sign up utilities. User can sign up, sign in, and create a blog post. sign in and sign up credentials is stored on firebase real-time database. After blog post is created, it will be shown on the home page. I also experienced framer-motion library with this project."
+                    },
+                    "crypto-marketcap": {
+                        "description": "I have completed this cryptocurrency marketcap website. It has landing page, and a header to show some crypto statistics. It also has coins tab and user can see Top 100 coins with images and some other values. I have used Cryptomarketcap API for this project. Finally, there were some errors about CORS policy and I used netlify-cli tool for that as well."
+                    },
+                    "auth-firebase": {
+                        "description": "This was my first project using TailwindCSS. It has basically two screens sign up and sign in. There is no react-router setup. I learned basics of React. I used Firebase real-time database to store user credentials."
+                    },
+                    "currency-converter": {
+                        "description": "This is a basic currency converter website. I have used currency API to retrieve data of currencies. I also used react-select library to be specific about currency exchanges."
+                    },
+                    "resipe-search": {
+                        "description": "This is my very first React single page application. I have used edamam API for this project. It basically has an input field for searching some recipes. I also used react-loader-spinner for loading state for this project for better user experience."
+                    }
+                },
+                "reactNative": {
+                    "register-and-search-news": {
+                        "description": "This is my news application developed with React-Native. I have used lots of frameworks with this project. It has sign up and sign in screens. Once user is authenticated it redirects user to home page to show the latest news from news API. I implemented categories, search, and skeleton loading into this project. There is also a profile section which user can see information about itself."
+                    },
+                    "restaurant-search": {
+                        "description": "This is a restaurant search application. I have used Yelp API to get the data about restaurants. There is an input field on the home page for users to search restaurants. Once they search it, they can tap into the details of individual restaurant and see lots of details like reviews, images, and location of the restaurant on the map."
+                    },
+                    "auth-screen": {
+                        "description": "This is a basic UI implementation for react-native. It has just sign up and sign in screens with no interactivity like signing in. I have used bottom tab navigator with this project and also I improved my layout skills in react-native."
+                    }
+                },
+                "javascript": {
+                    "budget-tracker": {
+                        "description": "This is a budget tracker website. It provides some functions for user to track their budget with one screen."
+                    },
+                    "movie-list": {
+                        "description": "This is a movie list website. It shows latest trending movies on the screen. I have used themoviedb API to get the data of movies."
+                    },
+                    "todo-list": {
+                        "description": "This is a to-do list website. As every beginner I made a to-do list to understand everything more in programming. User can add to-do, complete to-do, and delete to-do like so."
+                    },
+                    "search-weather-location": {
+                        "description": "This is a weather website to show weather of a given location. I have used Openweathermap API to get the data and show to the user. It also has the search functionality for a location."
+                    }
+                }
+            }
         },
         "FourthSection": {
             "title": "İletişime Geçin",

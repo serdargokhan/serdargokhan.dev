@@ -45,7 +45,9 @@ function ThirdSection() {
                             title={projectItem.title}
                             websiteLink={projectItem.websiteLink}
                             sourceLink={projectItem.sourceLink}
-                            description={projectItem.description}
+                            description={t(
+                                `projects.${category}.${projectItem.id}.description` as any
+                            )}
                             techStacks={projectItem.techStacks}
                         />
                     ))}

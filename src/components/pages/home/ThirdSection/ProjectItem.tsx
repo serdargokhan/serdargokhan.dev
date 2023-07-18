@@ -7,7 +7,7 @@ function ProjectItem({
     websiteLink,
     sourceLink,
     techStacks
-}: ProjectItemProps) {
+}: Omit<ProjectItemProps, "id">) {
     return (
         <article className="flex cursor-default flex-col gap-6 bg-white p-6 text-primary-300 transition duration-300 hover:-translate-y-4 hover:translate-x-4 hover:shadow-primary-100">
             <h3 className="bg-primary-100 p-2 text-center font-semibold">

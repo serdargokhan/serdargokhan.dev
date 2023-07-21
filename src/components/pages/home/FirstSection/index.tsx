@@ -1,14 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import GreetingImage from "@public/images/pages/home/greeting.svg";
 import { NextImage } from "@src/components/common";
+import GreetingImage from "@public/images/pages/home/greeting.svg";
 
 function FirstSection() {
     const t = useTranslations("Home.FirstSection");
 
     return (
-        <section className="bg-hero-pattern flex min-h-[calc(100vh-64px)] items-center py-20">
+        <section className="bg-hero-pattern section-height flex items-center py-20">
             <div className="container flex items-center justify-between gap-20">
                 <div className="grid cursor-default gap-4 text-primary-300 md:w-1/2">
                     <span className="text-primary-200">{t("greeting")}</span>

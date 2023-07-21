@@ -14,7 +14,7 @@ function ThirdSection() {
 
     return (
         <section
-            className="grid min-h-screen bg-primary-300 py-20"
+            className="section-height grid bg-primary-300 py-20"
             id="projects"
         >
             <div className="container">

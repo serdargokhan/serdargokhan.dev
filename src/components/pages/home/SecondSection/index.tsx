@@ -1,15 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import AboutMeImage from "@public/images/pages/home/about-me.svg";
 import { NextImage } from "@src/components/common";
+import AboutMeImage from "@public/images/pages/home/about-me.svg";
 
 function SecondSection() {
     const t = useTranslations("Home.SecondSection");
 
     return (
         <section
-            className="flex min-h-screen items-center bg-primary-200 py-20"
+            className="section-height flex items-center bg-primary-200 py-20"
             id="about"
         >
             <div className="container flex cursor-default items-center justify-between gap-20">

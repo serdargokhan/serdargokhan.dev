@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+    :root {
+        --header-height: 64px;
+        --footer-height: 64px;
+    }
+
     * {
         -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+        scroll-padding-top: var(--header-height);
     }
 }
 
@@ -25,5 +34,23 @@
         background-size: 3rem 3rem;
         background-color: #fff0e5;
         background-position: center;
+    }
+
+    .h-header {
+        height: var(--header-height);
+    }
+
+    .h-footer {
+        height: var(--footer-height);
+    }
+
+    .section-height {
+        min-height: calc(100vh - var(--header-height));
+    }
+
+    .last-section-height {
+        min-height: calc(
+            100vh - calc(var(--header-height) + var(--footer-height))
+        );
     }
 }

@@ -9,9 +9,9 @@ function Footer() {
     const pathname = usePathname();
 
     return (
-        <footer className="flex h-16 cursor-default items-center bg-primary-300 text-primary-400">
+        <footer className="h-footer flex cursor-default items-center bg-primary-300 text-primary-400">
             <div className="container flex items-center justify-between text-sm">
-                <p>Made with ❤️ in Istanbul © {new Date().getFullYear()}</p>
+                <p>Made with ❤️ © {new Date().getFullYear()}</p>
                 <div className="flex items-center space-x-2 font-semibold">
                     <Label htmlFor="lang">TR</Label>
                     <Switch

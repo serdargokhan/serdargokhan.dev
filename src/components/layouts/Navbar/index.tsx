@@ -6,7 +6,7 @@ import NavLinks from "./NavLinks";
 
 function Navbar() {
     return (
-        <nav className="sticky top-0 z-50 flex h-16 items-center border-b-2 border-primary-100 bg-primary-300">
+        <nav className="h-header sticky top-0 z-50 flex items-center border-b-2 border-primary-100 bg-primary-300">
             <div className="container flex items-center justify-between">
                 <a
                     className="rounded-full bg-primary-100 p-1 transition hover:shadow-primary-400"

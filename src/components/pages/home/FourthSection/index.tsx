@@ -1,15 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import ContactImage from "@public/images/pages/home/contact.svg";
 import { NextImage } from "@src/components/common";
+import ContactImage from "@public/images/pages/home/contact.svg";
 
 function FourthSection() {
     const t = useTranslations("Home.FourthSection");
 
     return (
         <section
-            className="flex min-h-[calc(100vh-64px)] items-center bg-primary-400"
+            className="last-section-height flex items-center bg-primary-400"
             id="contact"
         >
             <div className="container flex cursor-default items-center justify-between gap-20 py-16">

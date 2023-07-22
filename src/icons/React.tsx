@@ -1,10 +1,10 @@
 function Icon({ ...props }: React.SVGProps<SVGSVGElement>) {
     return (
         <svg
-            {...props}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 128 128"
             fill="currentColor"
+            {...props}
         >
             <g transform="matrix(1.25305,0,0,1.25305,-16.3076,4.57191)">
                 <circle cx="64" cy="47.5" r="9.3" />

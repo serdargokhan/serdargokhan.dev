@@ -15,6 +15,10 @@
         },
         "PortfolioSection": {
             "title": "Yaptığım Bazı Projeler",
+            "actions": {
+                "visit-website": "Ziyaret Et",
+                "source-code": "Kaynak Kodu"
+            },
             "projects": {
                 "nextjs": {
                     "microsoft-todo-clone": {

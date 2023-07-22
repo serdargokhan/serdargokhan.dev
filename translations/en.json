@@ -15,6 +15,10 @@
         },
         "PortfolioSection": {
             "title": "Some Projects I've Built",
+            "actions": {
+                "visit-website": "Visit Website",
+                "source-code": "Source Code"
+            },
             "projects": {
                 "nextjs": {
                     "microsoft-todo-clone": {

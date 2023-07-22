@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 import { NextImage } from "@src/components/common";
 import AboutMeImage from "@public/images/pages/home/about-me.svg";
 
-function SecondSection() {
-    const t = useTranslations("Home.SecondSection");
+export default function AboutSection() {
+    const t = useTranslations("Home.AboutSection");
 
     return (
         <section
@@ -26,5 +26,3 @@ function SecondSection() {
         </section>
     );
 }
-
-export default SecondSection;

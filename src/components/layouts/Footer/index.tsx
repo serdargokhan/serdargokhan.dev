@@ -5,7 +5,7 @@ import { Label } from "@src/components/ui/Label";
 import { Switch } from "@src/components/ui/Switch";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@src/icons";
 
-function Footer() {
+export default function Footer() {
     const router = useRouter();
     const pathname = usePathname();
 
@@ -55,5 +55,3 @@ function Footer() {
         </footer>
     );
 }
-
-export default Footer;

@@ -1,19 +1,19 @@
 {
     "Home": {
-        "FirstSection": {
+        "GreetingSection": {
             "greeting": "Merhaba, Ben",
             "name": "Serdar Gökhan",
             "title": "Tutkulu bir Front-End Geliştirici",
             "paragraph-one": "İstanbul'da yaşayan bir front-end yazılım geliştiricisi ve aynı zamanda mekatronik mühendisiyim. Sadece görsel olarak öne çıkan değil, aynı zamanda farklı tarayıcılarda ve cihazlarda sorunsuz çalışan web siteleri geliştirme konusunda uzmanım.",
             "paragraph-two": "Biraz aşağı kaydırırsanız, son projelerimden bazılarına göz atabilir ve neler yaptığımı görebilirsiniz. Şu anda <link>EnterERP</link>'de çalışıyorum ve müşterilerimize gerçek değer sunan, kullanımı kolay ve erişilebilir web siteleri geliştiriyorum."
         },
-        "SecondSection": {
+        "AboutSection": {
             "title": "Hakkımda",
             "paragraph-one": "Selam! Ben Serdar Gökhan, Marmara Üniversitesi'nden mezun olmuş bir mekatronik mühendisiyim. Şu anda İstanbul'da ikâmet ediyorum, programlama yolculuğuma henüz üniversitedeyken başladım ve Haziran 2021'de de web geliştirme yolculuğuma başladım.",
             "paragraph-two": "Öğrenmeye HTML, CSS ve JavaScript'in temelleriyle başladım ve bu dilleri etkili bir şekilde anlamak için gereken maksimum zamanı ayırdım. Oluşturduğum bu temel, ReactJS, NextJS, TailwindCSS ve TypeScript gibi daha gelişmiş dilleri ve kütüphaneleri hızlı bir şekilde anlamamı sağladı.",
             "paragraph-three": "Öğrenme serüvenim boyunca çok sayıda proje geliştirdim. Amacım, becerilerimi geliştirmeye devam etmek ve daha da iyi bir geliştirici olmak. Sürekli değişen web geliştirme dünyasında her zaman keşfedilecek bir çok şey olduğu için bu yolculuğun beni nereye götüreceğini görmekten heyecan duyuyorum."
         },
-        "ThirdSection": {
+        "PortfolioSection": {
             "title": "Yaptığım Bazı Projeler",
             "projects": {
                 "nextjs": {
@@ -71,7 +71,7 @@
                 }
             }
         },
-        "FourthSection": {
+        "ContactSection": {
             "title": "İletişime Geçin",
             "paragraph-one": "Herhangi bir sorunuz varsa veya potansiyel bir proje hakkında bilgi almak istiyorsanız, aşağıda verdiğim iletişim e-postası aracılığıyla bana ulaşmaktan çekinmeyin. İşbirliğine her zaman açığım ve yeni müşterilerle çalışmaktan keyif alıyorum.",
             "paragraph-two": "Ayrıca, sadece bağlantı kurmak istiyorsanız veya çalışmalarım hakkında herhangi bir sorunuz varsa, bana bir mesaj göndermekten çekinmeyin. Sizden haber almak için sabırsızlanıyorum!",

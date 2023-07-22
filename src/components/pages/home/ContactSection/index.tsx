@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 import { NextImage } from "@src/components/common";
 import ContactImage from "@public/images/pages/home/contact.svg";
 
-function FourthSection() {
-    const t = useTranslations("Home.FourthSection");
+export default function ContactSection() {
+    const t = useTranslations("Home.ContactSection");
 
     return (
         <section
@@ -29,5 +29,3 @@ function FourthSection() {
         </section>
     );
 }
-
-export default FourthSection;

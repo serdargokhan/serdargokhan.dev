@@ -6,7 +6,12 @@ type NextImageProps = ImageProps & {
     rootClassName?: string;
 };
 
-function NextImage({ src, alt, rootClassName, ...rest }: NextImageProps) {
+export default function NextImage({
+    src,
+    alt,
+    rootClassName,
+    ...rest
+}: NextImageProps) {
     return (
         <div
             className={cn(
@@ -23,5 +28,3 @@ function NextImage({ src, alt, rootClassName, ...rest }: NextImageProps) {
         </div>
     );
 }
-
-export default NextImage;

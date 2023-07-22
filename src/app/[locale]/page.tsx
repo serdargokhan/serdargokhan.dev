@@ -1,15 +1,15 @@
-import FirstSection from "@src/components/pages/home/FirstSection";
-import SecondSection from "@src/components/pages/home/SecondSection";
-import ThirdSection from "@src/components/pages/home/ThirdSection";
-import FourthSection from "@src/components/pages/home/FourthSection";
+import GreetingSection from "@src/components/pages/home/GreetingSection";
+import AboutSection from "@src/components/pages/home/AboutSection";
+import PortfolioSection from "@src/components/pages/home/PortfolioSection";
+import ContactSection from "@src/components/pages/home/ContactSection";
 
 export default function Page() {
     return (
         <>
-            <FirstSection />
-            <SecondSection />
-            <ThirdSection />
-            <FourthSection />
+            <GreetingSection />
+            <AboutSection />
+            <PortfolioSection />
+            <ContactSection />
         </>
     );
 }

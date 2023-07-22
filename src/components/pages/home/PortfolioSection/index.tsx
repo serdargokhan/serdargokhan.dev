@@ -7,10 +7,10 @@ import { Category, projectItems } from "./projectItems";
 import { categoryButtons } from "./categoryButtons";
 import ProjectItem from "./ProjectItem";
 
-function ThirdSection() {
+export default function PortfolioSection() {
     const [category, setCategory] = useState<Category>("nextjs");
 
-    const t = useTranslations("Home.ThirdSection");
+    const t = useTranslations("Home.PortfolioSection");
 
     return (
         <section className="section-height grid bg-primary-300" id="projects">
@@ -53,5 +53,3 @@ function ThirdSection() {
         </section>
     );
 }
-
-export default ThirdSection;

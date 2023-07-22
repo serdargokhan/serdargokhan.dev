@@ -4,8 +4,8 @@ import { useTranslations } from "next-intl";
 import { NextImage } from "@src/components/common";
 import GreetingImage from "@public/images/pages/home/greeting.svg";
 
-function FirstSection() {
-    const t = useTranslations("Home.FirstSection");
+export default function GreetingSection() {
+    const t = useTranslations("Home.GreetingSection");
 
     return (
         <section className="section-height flex items-center bg-primary-400">
@@ -35,5 +35,3 @@ function FirstSection() {
         </section>
     );
 }
-
-export default FirstSection;

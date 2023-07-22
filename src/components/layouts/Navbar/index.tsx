@@ -8,7 +8,7 @@ import SiteLogo from "@public/images/common/site-logo.svg";
 
 const navigationLinks = ["about", "projects", "contact"] as const;
 
-function Navbar() {
+export default function Navbar() {
     const [activeLink, setActiveLink] = useState("");
 
     const t = useTranslations("Navigation");
@@ -73,5 +73,3 @@ function Navbar() {
         </nav>
     );
 }
-
-export default Navbar;

@@ -1,7 +1,7 @@
 import { SourceButton, WebsiteButton } from "@src/components/common";
 import type { ProjectItem as ProjectItemProps } from "./projectItems";
 
-function ProjectItem({
+export default function ProjectItem({
     title,
     description,
     websiteLink,
@@ -26,5 +26,3 @@ function ProjectItem({
         </article>
     );
 }
-
-export default ProjectItem;

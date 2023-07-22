@@ -3,7 +3,7 @@ import { ExternalLinkIcon } from "@src/icons";
 
 type WebsiteButtonProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
-function WebsiteButton({ href, ...props }: WebsiteButtonProps) {
+export default function WebsiteButton({ href, ...props }: WebsiteButtonProps) {
     return (
         <a
             href={href}
@@ -17,5 +17,3 @@ function WebsiteButton({ href, ...props }: WebsiteButtonProps) {
         </a>
     );
 }
-
-export default WebsiteButton;

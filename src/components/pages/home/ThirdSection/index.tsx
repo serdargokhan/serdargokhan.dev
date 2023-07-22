@@ -13,11 +13,8 @@ function ThirdSection() {
     const t = useTranslations("Home.ThirdSection");
 
     return (
-        <section
-            className="section-height grid bg-primary-300 py-20"
-            id="projects"
-        >
-            <div className="container">
+        <section className="section-height grid bg-primary-300" id="projects">
+            <div className="container py-12 lg:py-20">
                 <h2 className="text-4xl font-bold text-white">{t("title")}</h2>
 
                 <div className="my-10 flex flex-wrap justify-center gap-8">

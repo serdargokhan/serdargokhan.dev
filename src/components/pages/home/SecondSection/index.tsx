@@ -9,19 +9,12 @@ function SecondSection() {
 
     return (
         <section
-            className="section-height flex items-center bg-primary-200 py-20"
+            className="section-height flex items-center bg-primary-200"
             id="about"
         >
-            <div className="container flex cursor-default items-center justify-between gap-20">
-                <div className="hidden md:inline-block">
-                    <NextImage
-                        src={AboutMeImage}
-                        width={600}
-                        height={400}
-                        alt=""
-                    />
-                </div>
-                <div className="grid gap-4 font-semibold text-white md:w-1/2">
+            <div className="container grid cursor-default place-items-center gap-12 py-12 lg:grid-cols-2 lg:gap-20 lg:py-20">
+                <NextImage src={AboutMeImage} alt="" />
+                <div className="grid gap-4 font-semibold text-white">
                     <h2 className="text-6xl font-bold text-primary-100">
                         {t("title")}
                     </h2>

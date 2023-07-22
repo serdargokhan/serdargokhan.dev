@@ -12,8 +12,8 @@ function FourthSection() {
             className="last-section-height flex items-center bg-primary-400"
             id="contact"
         >
-            <div className="container flex cursor-default items-center justify-between gap-20 py-16">
-                <div className="grid gap-4 font-semibold text-primary-300 md:w-1/2">
+            <div className="container grid cursor-default place-items-center gap-12 max-lg:py-12 lg:grid-cols-2 lg:gap-20">
+                <div className="grid gap-4 font-semibold text-primary-300">
                     <h2 className="text-6xl font-bold">{t("title")}</h2>
                     <p>{t("paragraph-one")}</p>
                     <p>{t("paragraph-two")}</p>
@@ -24,14 +24,7 @@ function FourthSection() {
                         {t("cta")}
                     </a>
                 </div>
-                <div className="hidden md:inline-block">
-                    <NextImage
-                        width={600}
-                        height={400}
-                        src={ContactImage}
-                        alt=""
-                    />
-                </div>
+                <NextImage src={ContactImage} alt="" />
             </div>
         </section>
     );

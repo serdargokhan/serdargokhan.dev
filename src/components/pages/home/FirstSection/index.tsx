@@ -8,9 +8,9 @@ function FirstSection() {
     const t = useTranslations("Home.FirstSection");
 
     return (
-        <section className="bg-hero-pattern section-height flex items-center py-20">
-            <div className="container flex items-center justify-between gap-20">
-                <div className="grid cursor-default gap-4 text-primary-300 md:w-1/2">
+        <section className="section-height flex items-center bg-primary-400">
+            <div className="container grid place-items-center gap-12 py-12 lg:grid-cols-2 lg:gap-20 lg:py-20">
+                <div className="grid cursor-default gap-4 text-primary-300">
                     <span className="text-primary-200">{t("greeting")}</span>
                     <h1 className="text-6xl font-bold">{t("name")}</h1>
                     <p className="text-3xl italic">{t("title")}</p>
@@ -30,15 +30,7 @@ function FirstSection() {
                         })}
                     </p>
                 </div>
-                <div className="hidden md:inline-block">
-                    <NextImage
-                        src={GreetingImage}
-                        width={600}
-                        height={400}
-                        priority
-                        alt=""
-                    />
-                </div>
+                <NextImage src={GreetingImage} priority alt="" />
             </div>
         </section>
     );

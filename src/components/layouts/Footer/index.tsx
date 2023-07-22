@@ -3,6 +3,7 @@
 import { useRouter, usePathname } from "next/navigation";
 import { Label } from "@src/components/ui/Label";
 import { Switch } from "@src/components/ui/Switch";
+import { NextLink } from "@src/components/common";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@src/icons";
 
 export default function Footer() {
@@ -12,28 +13,16 @@ export default function Footer() {
     return (
         <footer className="h-footer flex cursor-default items-center bg-primary-300 text-primary-400">
             <div className="container flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2">
-                    <a
-                        href="https://github.com/serdargokhan"
-                        target="_blank"
-                        rel="noopener"
-                    >
+                <div className="flex items-center gap-4">
+                    <NextLink href="https://github.com/serdargokhan">
                         <GithubIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/serdarrgokhann"
-                        target="_blank"
-                        rel="noopener"
-                    >
+                    </NextLink>
+                    <NextLink href="https://www.linkedin.com/in/serdarrgokhann">
                         <LinkedinIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
-                    </a>
-                    <a
-                        href="https://twitter.com/serdarrgokhann"
-                        target="_blank"
-                        rel="noopener"
-                    >
+                    </NextLink>
+                    <NextLink href="https://twitter.com/serdarrgokhann">
                         <TwitterIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
-                    </a>
+                    </NextLink>
                 </div>
                 <p className="hidden sm:inline-block">
                     Made with ❤️ © {new Date().getFullYear()}

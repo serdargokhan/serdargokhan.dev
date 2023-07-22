@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { NextImage } from "@src/components/common";
+import { NextImage, NextLink } from "@src/components/common";
 import ContactImage from "@public/images/pages/home/contact.svg";
 
 export default function ContactSection() {
@@ -17,12 +17,12 @@ export default function ContactSection() {
                     <h2 className="text-6xl font-bold">{t("title")}</h2>
                     <p>{t("paragraph-one")}</p>
                     <p>{t("paragraph-two")}</p>
-                    <a
+                    <NextLink
                         className="w-fit rounded-full border-2 border-primary-200 bg-primary-200 px-6 py-3 text-white transition-all hover:bg-primary-400 hover:text-primary-300"
                         href="mailto:gokhan_bakirci_53@hotmail.com?subject=Hello!"
                     >
                         {t("cta")}
-                    </a>
+                    </NextLink>
                 </div>
                 <NextImage src={ContactImage} alt="" />
             </div>

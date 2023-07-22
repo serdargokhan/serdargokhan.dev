@@ -1,7 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { NextImage } from "@src/components/common";
+import { NextImage, NextLink } from "@src/components/common";
 import GreetingImage from "@public/images/pages/home/greeting.svg";
 
 export default function GreetingSection() {
@@ -18,14 +18,12 @@ export default function GreetingSection() {
                     <p className="font-semibold">
                         {t.rich("paragraph-two", {
                             link: children => (
-                                <a
+                                <NextLink
                                     href="https://www.entererp.com"
-                                    rel="noopener noreferrer"
-                                    target="_blank"
                                     className="hover: text-primary-200 underline-offset-2 hover:cursor-pointer hover:underline"
                                 >
                                     {children}
-                                </a>
+                                </NextLink>
                             )
                         })}
                     </p>

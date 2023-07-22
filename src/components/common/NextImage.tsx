@@ -8,7 +8,12 @@ type NextImageProps = ImageProps & {
 
 function NextImage({ src, alt, rootClassName, ...rest }: NextImageProps) {
     return (
-        <div className={cn("relative h-full w-full", rootClassName)}>
+        <div
+            className={cn(
+                "relative grid h-full w-full place-items-center",
+                rootClassName
+            )}
+        >
             <Image
                 src={src}
                 alt={alt}

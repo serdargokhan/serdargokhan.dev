@@ -53,8 +53,10 @@ export default async function RootLayout({
     );
 }
 
+const BASE_URL = "https://serdargokhan.dev";
+
 export const metadata: Metadata = {
-    metadataBase: new URL("https://serdargokhan.dev"),
+    metadataBase: new URL(BASE_URL),
     title: {
         default: "Portfolio | Serdar Gökhan",
         template: "%s | Serdar Gökhan"
@@ -90,11 +92,11 @@ export const metadata: Metadata = {
     },
     alternates: {
         languages: {
-            "x-default": "https://serdargokhan.dev",
-            en: "https://serdargokhan.dev/en",
-            tr: "https://serdargokhan.dev/tr"
+            "x-default": BASE_URL,
+            en: `${BASE_URL}/en`,
+            tr: `${BASE_URL}/tr`
         },
-        canonical: "https://serdargokhan.dev"
+        canonical: BASE_URL
     },
     verification: {
         google: "UJthXaWw4SK7do_wKDjzQXss3tPHWfF0dXCBjfQrZek"
@@ -107,15 +109,8 @@ export const metadata: Metadata = {
         title: "Serdar Gökhan",
         description:
             "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites located in İstanbul.",
-        url: "https://serdargokhan.dev",
+        url: BASE_URL,
         siteName: "Serdar Gökhan",
-        images: [
-            {
-                url: "https://images.unsplash.com/photo-1619410283995-43d9134e7656?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=90",
-                width: 800,
-                height: 600
-            }
-        ],
         locale: "en-US",
         type: "website"
     }

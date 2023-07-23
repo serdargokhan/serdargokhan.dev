@@ -6,8 +6,8 @@ import { Nunito } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { Analytics } from "@vercel/analytics/react";
 import { cn } from "src/utils";
-import Navbar from "@src/components/layouts/Navbar";
-import Footer from "@src/components/layouts/Footer";
+import Navbar from "@src/layouts/Navbar";
+import Footer from "@src/layouts/Footer";
 
 const nunitoFont = Nunito({
     subsets: ["latin", "latin-ext"],

@@ -22,55 +22,55 @@
             "projects": {
                 "nextjs": {
                     "microsoft-todo-clone": {
-                        "description": "This is the biggest project that I have in my portfolio. It took me so long even to get the project so far. I could not finish it due to work but I have done a lot. I owe a lot of new knowledge to this project. In this project I have used TypeScript, SCSS, Firebase Authentication, and MongoDB. I learnt MongoDB from scratch with this project."
+                        "description": "Bu benim portföyümdeki en büyük proje. Projeyi bu aşamaya kadar getirmem bile çok uzun sürdü. İş nedeniyle tamamen bitiremedim fakat bir çok şey yaptım. Bu projede TypeScript, SCSS, Firebase Authentication ve MongoDB kullandım. Bu proje ile MongoDB'yi sıfırdan öğrendim."
                     },
                     "add-your-website": {
-                        "description": "I have developed this project as a part of a tutorial from Youtube thanks to Lee Robinson for inspiration. I have used Chakra UI, useSWR, and Skeleton loading for the first time with this project. I also stored the user information on Firebase Firestore and login was implemented with Firebase authentication. It has Github login authentication."
+                        "description": "Bu projeyi Youtube'daki bir eğitimin parçası olarak geliştirdim, ilham için Lee Robinson'a teşekkür ederim. Chakra UI, useSWR ve Skeleton yüklemesini ilk defa bu proje ile kullandım. Ayrıca kullanıcı bilgilerini Firebase Firestore üzerinde depoladım ve Firebase authentication ile login gerçekleştirdim."
                     },
                     "shopify-clone": {
-                        "description": "I have completed this project and I got inspired from Shopify website. It is kind of e-commerce website. There are sign in and sign up proccess. User can create a product, delete a product if they created it, and also add to cart. I used minimal workflow with this project and no extra framework."
+                        "description": "Bu projeyi Shopify web sitesinden ilham alarak yaptım. Bir çeşit e-ticaret sitesidir. Oturum açma ve kaydolma süreci vardır. Kullanıcılar bir ürün oluşturabilir, oluşturduysa ürünü silebilir ve ayrıca sepete ekleyebilir."
                     }
                 },
                 "reactjs": {
                     "create-blog-posts": {
-                        "description": "I have completed this blog website. It has sign in and sign up utilities. User can sign up, sign in, and create a blog post. sign in and sign up credentials is stored on firebase real-time database. After blog post is created, it will be shown on the home page. I also experienced framer-motion library with this project."
+                        "description": "Oturum açma ve kaydolma özelliklerine sahiptir. Kullanıcılar kaydolabilir, oturum açabilir ve bir blog yazısı oluşturabilir. Oturum açma ve kaydolma kimlik bilgileri Firebase gerçek zamanlı veritabanında saklanır. Blog yazısı oluşturulduktan sonra ana sayfada gösteriliyor. Bu proje ile framer-motion kütüphanesini de deneyimledim."
                     },
                     "crypto-marketcap": {
-                        "description": "I have completed this cryptocurrency marketcap website. It has landing page, and a header to show some crypto statistics. It also has coins tab and user can see Top 100 coins with images and some other values. I have used Cryptomarketcap API for this project. Finally, there were some errors about CORS policy and I used netlify-cli tool for that as well."
+                        "description": "Kripto para piyasa değeri web sitesini tamamladım. Bir açılış sayfası ve bazı kripto istatistiklerini göstermek için yapılmıştır. Ayrıca bir kripto para sekmesi vardır ve kullanıcılar ilk 100 kripto parayı resimlerle ve diğer bazı değerlerle görebilir. Bu proje için Cryptomarketcap API kullandım. Son olarak, CORS politikasında bazı hatalar vardı ve bunun için de netlify-cli aracını kullandım."
                     },
                     "auth-firebase": {
-                        "description": "This was my first project using TailwindCSS. It has basically two screens sign up and sign in. There is no react-router setup. I learned basics of React. I used Firebase real-time database to store user credentials."
+                        "description": "Bu benim TailwindCSS kullandığım ilk projemdi. Kayıt ve giriş olmak üzere iki ekranı var. react-router kurulumu yok. React'in temellerini öğrendim. Kullanıcı kimlik bilgilerini saklamak için Firebase gerçek zamanlı veritabanını kullandım."
                     },
                     "currency-converter": {
-                        "description": "This is a basic currency converter website. I have used currency API to retrieve data of currencies. I also used react-select library to be specific about currency exchanges."
+                        "description": "Bu temel bir para birimi dönüştürücü web sitesidir. Para birimleri hakkında veri almak için para birimi API'sini kullandım. Ayrıca para birimi değişimleri hakkında spesifik olmak için react-select kütüphanesini kullandım."
                     },
                     "resipe-search": {
-                        "description": "This is my very first React single page application. I have used edamam API for this project. It basically has an input field for searching some recipes. I also used react-loader-spinner for loading state for this project for better user experience."
+                        "description": "Bu benim ilk React tek sayfalık uygulamam. Bu proje için edamame API'sini kullandım. Bazı tarifleri aramak için bir giriş alanı var. Ayrıca daha iyi bir kullanıcı deneyimi için bu projede yükleme durumu için react-loader-spinner kullandım."
                     }
                 },
                 "reactNative": {
                     "register-and-search-news": {
-                        "description": "This is my news application developed with React-Native. I have used lots of frameworks with this project. It has sign up and sign in screens. Once user is authenticated it redirects user to home page to show the latest news from news API. I implemented categories, search, and skeleton loading into this project. There is also a profile section which user can see information about itself."
+                        "description": "Bu benim React-Native ile geliştirdiğim haber uygulamam. Kayıt ve giriş ekranları var. Kullanıcı kimliği doğrulandıktan sonra, haber API'sinden en son haberleri göstermek için kullanıcıyı ana sayfaya yönlendirir. Ayrıca kullanıcıların kendileri hakkında bilgileri görebilecekleri bir profil bölümü de var."
                     },
                     "restaurant-search": {
-                        "description": "This is a restaurant search application. I have used Yelp API to get the data about restaurants. There is an input field on the home page for users to search restaurants. Once they search it, they can tap into the details of individual restaurant and see lots of details like reviews, images, and location of the restaurant on the map."
+                        "description": "Bu bir restoran arama uygulamasıdır. Restoranlar hakkında veri almak için Yelp API kullandım. Kullanıcıların restoran araması yapabilmesi için ana sayfada bir giriş alanı bulunmaktadır. Arama yaptıktan sonra, tek tek restoranların ayrıntılarına girebilir ve yorumlar, resimler ve restoranın harita üzerindeki konumu gibi birçok ayrıntıyı görebilirler."
                     },
                     "auth-screen": {
-                        "description": "This is a basic UI implementation for react-native. It has just sign up and sign in screens with no interactivity like signing in. I have used bottom tab navigator with this project and also I improved my layout skills in react-native."
+                        "description": "Bu, react-native için temel bir UI uygulamasıdır. Oturum açma gibi bir etkileşim olmadan sadece kayıt ve oturum açma ekranlarına sahiptir. Bu proje ile tab navigasyon kullandım ve ayrıca react-native'deki düzen becerilerimi geliştirdim."
                     }
                 },
                 "javascript": {
                     "budget-tracker": {
-                        "description": "This is a budget tracker website. It provides some functions for user to track their budget with one screen."
+                        "description": "Bu bir bütçe takip web sitesidir. Kullanıcının bütçesini tek bir ekranla takip etmesi için bazı işlevler sağlar."
                     },
                     "movie-list": {
-                        "description": "This is a movie list website. It shows latest trending movies on the screen. I have used themoviedb API to get the data of movies."
+                        "description": "Bu bir film listesi web sitesidir. Ekranda en son trend filmleri gösterir. Filmlerin verilerini almak için themoviedb API kullandım."
                     },
                     "todo-list": {
-                        "description": "This is a to-do list website. As every beginner I made a to-do list to understand everything more in programming. User can add to-do, complete to-do, and delete to-do like so."
+                        "description": "Bu bir yapılacaklar listesi web sitesidir. Her yeni başlayan gibi, programlamada her şeyi daha iyi anlamak için bir yapılacaklar listesi yaptım. Kullanıcı yapılacaklar ekleyebilir, yapılacakları tamamlayabilir ve yapılacakları silebilir."
                     },
                     "search-weather-location": {
-                        "description": "This is a weather website to show weather of a given location. I have used Openweathermap API to get the data and show to the user. It also has the search functionality for a location."
+                        "description": "Bu, belirli bir konumun hava durumunu gösteren bir hava durumu web sitesidir. Verileri almak ve kullanıcıya göstermek için OpenWeatherMap API kullandım. Ayrıca bir konum için arama işlevine de sahiptir."
                     }
                 }
             }

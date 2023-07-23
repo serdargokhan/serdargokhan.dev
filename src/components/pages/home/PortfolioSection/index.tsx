@@ -15,7 +15,9 @@ export default function PortfolioSection() {
     return (
         <section className="section-height grid bg-primary-300" id="projects">
             <div className="container py-12 lg:py-20">
-                <h2 className="text-4xl font-bold text-white">{t("title")}</h2>
+                <h2 className="text-3xl font-bold text-white md:text-6xl">
+                    {t("title")}
+                </h2>
 
                 <div className="my-10 flex flex-wrap justify-center gap-8">
                     {categoryButtons.map(categoryButton => (

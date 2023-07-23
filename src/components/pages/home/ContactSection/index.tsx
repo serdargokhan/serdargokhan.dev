@@ -14,7 +14,9 @@ export default function ContactSection() {
         >
             <div className="container grid cursor-default place-items-center gap-12 max-lg:py-12 lg:grid-cols-2 lg:gap-20">
                 <div className="grid gap-4 font-semibold text-primary-300">
-                    <h2 className="text-6xl font-bold">{t("title")}</h2>
+                    <h2 className="text-3xl font-bold md:text-6xl">
+                        {t("title")}
+                    </h2>
                     <p>{t("paragraph-one")}</p>
                     <p>{t("paragraph-two")}</p>
                     <NextLink

@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+    content: ["src/**/*.{ts,tsx,mdx}"],
     theme: {
         extend: {
             container: {
@@ -18,8 +18,10 @@ export default {
                 }
             },
             boxShadow: {
-                "primary-100": "-10px 10px 0px 5px #ffd300",
-                "primary-400": "0px 0px 10px 2px #fff0e5"
+                "primary-100-lg": "-10px 10px 0px 5px #ffd300"
+            },
+            backgroundImage: {
+                noise: "url(/images/common/noise.png)"
             }
         }
     },

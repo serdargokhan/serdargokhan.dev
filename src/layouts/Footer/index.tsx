@@ -10,16 +10,25 @@ export default function Footer() {
     const pathname = usePathname();
 
     return (
-        <footer className="h-footer flex cursor-default items-center bg-primary-300 text-primary-400">
+        <footer className="h-footer flex cursor-default items-center bg-primary-300 text-white">
             <div className="container flex items-center justify-between text-sm">
-                <div className="flex items-center gap-4">
-                    <NextLink href="https://github.com/serdargokhan">
+                <div className="flex items-center gap-2.5">
+                    <NextLink
+                        href="https://github.com/serdargokhan"
+                        title="Github"
+                    >
                         <GithubIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
                     </NextLink>
-                    <NextLink href="https://www.linkedin.com/in/serdarrgokhann">
+                    <NextLink
+                        href="https://www.linkedin.com/in/serdarrgokhann"
+                        title="Linkedin"
+                    >
                         <LinkedinIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
                     </NextLink>
-                    <NextLink href="https://twitter.com/serdarrgokhann">
+                    <NextLink
+                        href="https://twitter.com/serdarrgokhann"
+                        title="Twitter"
+                    >
                         <TwitterIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
                     </NextLink>
                 </div>

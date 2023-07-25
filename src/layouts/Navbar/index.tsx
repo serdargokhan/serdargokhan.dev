@@ -27,7 +27,7 @@ export default function Navbar() {
         <nav className="h-header sticky top-0 z-50 flex items-center border-b-2 border-primary-100 bg-primary-300">
             <div className="container flex items-center justify-between">
                 <NextLink
-                    className="rounded-full bg-primary-100 p-1 transition hover:shadow-primary-400"
+                    className="rounded-full bg-primary-100 p-1"
                     href="#"
                     title=""
                     onClick={() => setActiveLink("")}
@@ -41,33 +41,34 @@ export default function Navbar() {
                     />
                 </NextLink>
 
-                <ul className="flex items-center justify-between gap-2 font-semibold text-primary-400 sm:gap-4">
+                <ul className="flex items-center justify-between gap-2 font-medium text-white sm:gap-6">
                     {navigationLinks.map(navigationLink => (
-                        <li
-                            key={navigationLink}
-                            onClick={() => setActiveLink(navigationLink)}
-                            className={cn(
-                                "cursor-pointer decoration-[3px] underline-offset-8",
-                                activeLink === navigationLink
-                                    ? "text-primary-100 underline"
-                                    : "hover:text-primary-100 hover:underline"
-                            )}
-                        >
-                            <NextLink href={`#${navigationLink}`}>
+                        <li key={navigationLink}>
+                            <NextLink
+                                href={`#${navigationLink}`}
+                                onClick={() => setActiveLink(navigationLink)}
+                                className={cn(
+                                    "py-1 decoration-2 underline-offset-8",
+                                    activeLink === navigationLink
+                                        ? "text-primary-100 underline"
+                                        : "transition hover:text-primary-100 hover:underline"
+                                )}
+                            >
                                 {t(navigationLink)}
                             </NextLink>
                         </li>
                     ))}
-                    <li>
-                        <NextLink
-                            className="rounded-full border-2 border-primary-100 px-3 py-1.5 transition hover:bg-primary-100 hover:text-primary-300 hover:shadow-primary-400"
-                            href="/static/resume.pdf"
-                            target="_blank"
-                        >
-                            {t("resume")}
-                        </NextLink>
-                    </li>
                 </ul>
+
+                <div className="group inline-block">
+                    <NextLink
+                        className="inline-block rounded-md border border-primary-300 bg-white px-4 py-1.5 font-medium transition duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:shadow-[-4px_4px_0px_0px_#ffd300]"
+                        href="/static/resume.pdf"
+                        target="_blank"
+                    >
+                        {t("resume")}
+                    </NextLink>
+                </div>
             </div>
         </nav>
     );

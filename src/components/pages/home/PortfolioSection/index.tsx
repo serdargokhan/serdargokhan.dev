@@ -26,12 +26,12 @@ export default function PortfolioSection() {
                             key={categoryButton.id}
                             onClick={() => setCategory(categoryButton.id)}
                             className={cn(
-                                "group relative flex items-center gap-1.5 border-b-[3px] border-transparent py-2 text-lg font-semibold text-primary-100 transition hover:text-primary-400",
+                                "group relative flex items-center gap-1.5 border-b-[3px] border-transparent py-2 text-lg font-semibold text-primary-100 transition hover:text-white",
                                 category === categoryButton.id &&
-                                    "border-primary-400 text-primary-400 [&>svg]:fill-primary-400"
+                                    "border-white text-white [&>svg]:fill-white"
                             )}
                         >
-                            <categoryButton.icon className="h-6 w-6 fill-primary-100 transition group-hover:fill-primary-400" />
+                            <categoryButton.icon className="h-6 w-6 fill-primary-100 transition group-hover:fill-white" />
                             <span>{categoryButton.title}</span>
                         </button>
                     ))}

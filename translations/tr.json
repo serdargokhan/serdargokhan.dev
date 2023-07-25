@@ -87,5 +87,7 @@
         "projects": "Projeler",
         "contact": "İletişim",
         "resume": "Özgeçmiş"
-    }
+    },
+    "default-seo-title": "Portfolyo | Serdar Gökhan",
+    "default-seo-description": "Ölçeklenebilir, çapraz tarayıcı uyumlu, performanslı ve duyarlı web siteleri oluşturan bir ön uç geliştiriciyim ve aynı zamanda bir mekatronik mühendisiyim."
 }

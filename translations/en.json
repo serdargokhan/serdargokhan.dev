@@ -87,5 +87,7 @@
         "projects": "Projects",
         "contact": "Contact",
         "resume": "Resume"
-    }
+    },
+    "default-seo-title": "Portfolio | Serdar Gökhan",
+    "default-seo-description": "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites."
 }

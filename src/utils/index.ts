@@ -1,1 +1,3 @@
-export { default as cn } from "./cn";
+export * from "./cn";
+export * from "./load-translations";
+export * from "./fonts";

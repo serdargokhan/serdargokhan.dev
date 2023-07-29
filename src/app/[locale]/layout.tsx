@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import type { Locale } from "@src/types";
 import { loadTranslations, nunitoFont } from "src/utils";
+import { LocaleDetector } from "@src/components/common";
 import Navbar from "@src/layouts/Navbar";
 import Footer from "@src/layouts/Footer";
 
@@ -30,6 +31,7 @@ export default async function RootLayout({
                     <Navbar />
                     <main>{children}</main>
                     <Footer />
+                    <LocaleDetector />
                 </NextIntlClientProvider>
 
                 <Analytics />

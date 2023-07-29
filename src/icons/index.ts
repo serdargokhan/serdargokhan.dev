@@ -5,3 +5,4 @@ export { default as GithubIcon } from "./Github";
 export { default as ExternalLinkIcon } from "./ExternalLink";
 export { default as LinkedinIcon } from "./Linkedin";
 export { default as TwitterIcon } from "./Twitter";
+export { default as CrossIcon } from "./Cross";

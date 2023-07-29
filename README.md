@@ -6,10 +6,6 @@
 ✨ My portfolio website built with <a href="https://nextjs.org" target="_blank">NextJS</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>, and shipped with <a href="https://vercel.com" target="_blank">Vercel</a>.
 </p>
 
-<div>
-  <img alt="Logo" src="https://serdargokhan.dev/opengraph-image.jpg" width="1200" height="630" />
-</div>
-
 ## 🛠 Installation & Set Up
 
 This application requires Node.js v16.13+.

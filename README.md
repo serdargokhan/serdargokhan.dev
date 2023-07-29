@@ -7,7 +7,7 @@
 </p>
 
 <div>
-  <img alt="Logo" src="https://serdargokhan.dev/opengraph-image.jpg" />
+  <img alt="Logo" src="https://serdargokhan.dev/opengraph-image.jpg" width="1200" height="630" />
 </div>
 
 ## 🛠 Installation & Set Up

@@ -6,9 +6,7 @@
 ✨ My portfolio website built with <a href="https://nextjs.org" target="_blank">NextJS</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>, and shipped with <a href="https://vercel.com" target="_blank">Vercel</a>.
 </p>
 
-<div>
-  <img alt="Opengraph Image" src="https://serdargokhan.dev/opengraph-image.jpg" />
-</div>
+![Image 1](./src/app/opengraph-image.jpg)
 
 ## 🛠 Installation & Set Up
 

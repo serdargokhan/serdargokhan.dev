@@ -52,6 +52,37 @@ This application requires Node.js v16.13+.
     pnpm start
     ```
 
+## 📁 Folder Structure
+
+```
+serdargokhan.dev
+├── public
+│   ├── images
+│   │   ├── common
+│   │   └── pages
+│   │       └── home
+│   └── static
+├── src
+│   ├── app
+│   │   └── [locale]
+│   ├── components
+│   │   ├── common
+│   │   ├── pages
+│   │   │   └── home
+│   │   │       ├── AboutSection
+│   │   │       ├── ContactSection
+│   │   │       ├── GreetingSection
+│   │   │       └── PortfolioSection
+│   │   └── ui
+│   ├── icons
+│   ├── layouts
+│   │   ├── Footer
+│   │   └── Navbar
+│   ├── types
+│   └── utils
+└── translations
+```
+
 ## 🎨 Color Reference
 
 | Color       | Hex                                                                |

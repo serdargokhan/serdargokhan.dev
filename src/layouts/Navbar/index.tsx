@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { cn } from "@src/utils";
 import { NextImage, NextLink } from "@src/components/common";
@@ -10,6 +11,8 @@ const navigationLinks = ["about", "projects", "contact"] as const;
 
 export default function Navbar() {
     const [activeLink, setActiveLink] = useState("");
+
+    const pathname = usePathname();
 
     const t = useTranslations("Navigation");
 
@@ -63,7 +66,11 @@ export default function Navbar() {
                 <div className="group inline-block">
                     <NextLink
                         className="inline-block rounded-md border border-primary-300 bg-white px-4 py-1.5 font-medium transition duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:shadow-[-4px_4px_0px_0px_#ffd300]"
-                        href="/static/resume.pdf"
+                        href={
+                            pathname === "/tr"
+                                ? "/static/resume-tr.pdf"
+                                : "/static/resume-en.pdf"
+                        }
                         target="_blank"
                     >
                         {t("resume")}

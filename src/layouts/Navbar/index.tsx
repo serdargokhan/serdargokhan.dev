@@ -72,6 +72,7 @@ export default function Navbar() {
                                 : "/static/resume-en.pdf"
                         }
                         target="_blank"
+                        prefetch={false}
                     >
                         {t("resume")}
                     </NextLink>

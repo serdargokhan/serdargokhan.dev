@@ -10,7 +10,7 @@
 
 ## 🛠 Installation & Set Up
 
-This application requires Node.js v16.13+.
+This application requires Node.js v18+.
 
 1. Clone the repository
 

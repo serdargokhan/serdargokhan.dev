@@ -4,6 +4,9 @@ export default {
     content: ["src/**/*.{ts,tsx,mdx}"],
     theme: {
         extend: {
+            screens: {
+                xs: "475px"
+            },
             container: {
                 center: true,
                 padding: "1rem",

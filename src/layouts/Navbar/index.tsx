@@ -44,7 +44,7 @@ export default function Navbar() {
                     />
                 </NextLink>
 
-                <ul className="flex items-center justify-between gap-2 font-medium text-white sm:gap-6">
+                <ul className="xs:flex hidden items-center justify-between gap-2 font-medium text-white sm:gap-6">
                     {navigationLinks.map(navigationLink => (
                         <li key={navigationLink}>
                             <NextLink

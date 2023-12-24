@@ -1,5 +1,6 @@
 import "../globals.css";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
+import {unstable_setRequestLocale as  setRequestLocale} from 'next-intl/server';
 import { Analytics } from "@vercel/analytics/react";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
@@ -22,6 +23,7 @@ export default async function RootLayout({
     children,
     params: { locale }
 }: RootLayoutProps) {
+    setRequestLocale(locale);
     const messages = await loadTranslations(locale);
 
     return (

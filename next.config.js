@@ -1,3 +1,5 @@
+import withNextIntl from "next-intl/plugin"
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     headers() {
@@ -51,4 +53,4 @@ const securityHeaders = [
     }
 ];
 
-export default nextConfig;
+export default withNextIntl()(nextConfig);

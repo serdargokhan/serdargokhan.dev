@@ -1,6 +1,6 @@
 import "../globals.css";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
-import {unstable_setRequestLocale as  setRequestLocale} from 'next-intl/server';
+import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
@@ -9,9 +9,10 @@ import { loadTranslations, nunitoFont } from "src/utils";
 import { LocaleDetector } from "@src/components/common";
 import Navbar from "@src/layouts/Navbar";
 import Footer from "@src/layouts/Footer";
+import siteConfig from "site.config";
 
 export function generateStaticParams(): { locale: Locale }[] {
-    return [{ locale: "en" }, { locale: "tr" }];
+    return siteConfig.locales.map(locale => ({ locale }));
 }
 
 type RootLayoutProps = {

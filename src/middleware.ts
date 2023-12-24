@@ -1,8 +1,9 @@
 import createMiddleware from "next-intl/middleware";
+import siteConfig from "site.config";
 
 export default createMiddleware({
-    locales: ["en", "tr"],
-    defaultLocale: "en",
+    locales: siteConfig.locales,
+    defaultLocale: siteConfig.defaultLocale,
     localeDetection: false,
     localePrefix: "as-needed",
     alternateLinks: false

@@ -3,8 +3,8 @@
         "GreetingSection": {
             "greeting": "Hey there, my name is",
             "name": "Serdar Gökhan",
-            "title": "A passionate Front-End Developer",
-            "paragraph-one": "I'm a front-end developer and mechatronics engineer based in İstanbul. I specialize in creating websites that are not only visually stunning but also perform smoothly across different browsers and devices.",
+            "title": "A passionate Frontend Developer",
+            "paragraph-one": "I'm a frontend developer and mechatronics engineer based in İstanbul. I specialize in creating websites that are not only visually stunning but also perform smoothly across different browsers and devices.",
             "paragraph-two": "If you scroll down a bit, you can check out some of my recent projects and see what I've been up to. Right now, I'm working at <link>EnterERP</link> and developing websites that are intuitive and easy to use while delivering real value to our customers."
         },
         "AboutSection": {
@@ -89,5 +89,5 @@
         "resume": "Resume"
     },
     "default-seo-title": "Portfolio | Serdar Gökhan",
-    "default-seo-description": "I’m a front-end developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites."
+    "default-seo-description": "I’m a frontend developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites."
 }

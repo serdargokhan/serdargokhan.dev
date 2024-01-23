@@ -44,7 +44,7 @@ export default function Navbar() {
                     />
                 </NextLink>
 
-                <ul className="xs:flex hidden items-center justify-between gap-2 font-medium text-white sm:gap-6">
+                <ul className="hidden items-center justify-between gap-2 font-medium text-white xs:flex sm:gap-6">
                     {navigationLinks.map(navigationLink => (
                         <li key={navigationLink}>
                             <NextLink
@@ -68,8 +68,8 @@ export default function Navbar() {
                         className="inline-block rounded-md border border-primary-300 bg-white px-4 py-1.5 font-medium transition duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:shadow-[-4px_4px_0px_0px_#ffd300]"
                         href={
                             pathname === "/tr"
-                                ? "/static/resume-tr.pdf"
-                                : "/static/resume-en.pdf"
+                                ? "/static/Serdar-Gökhan-BAKIRCI-TR.pdf"
+                                : "/static/Serdar-Gökhan-BAKIRCI-EN.pdf"
                         }
                         target="_blank"
                         prefetch={false}

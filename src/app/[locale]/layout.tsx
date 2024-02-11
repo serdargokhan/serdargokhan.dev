@@ -2,6 +2,7 @@ import "../globals.css";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
 import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import type { Locale } from "@src/types";
@@ -38,6 +39,7 @@ export default async function RootLayout({
                 </NextIntlClientProvider>
 
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );

@@ -1,8 +1,8 @@
-import withNextIntl from "next-intl/plugin"
+import { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
-/** @type {import('next').NextConfig} */
 const nextConfig = {
-    headers() {
+    async headers() {
         return [
             {
                 source: "/(.*)",
@@ -10,7 +10,7 @@ const nextConfig = {
             }
         ];
     }
-};
+} satisfies NextConfig;
 
 const contentSecurityPolicy = `
     default-src 'self' vercel.live;
@@ -53,4 +53,4 @@ const securityHeaders = [
     }
 ];
 
-export default withNextIntl()(nextConfig);
+export default createNextIntlPlugin()(nextConfig);

@@ -1,6 +1,15 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+    --color-primary-100: #ffd300;
+    --color-primary-200: #3a10e5;
+    --color-primary-300: #10162f;
+    --color-primary-400: #fff0e5;
+
+    --breakpoint-xs: 475px;
+
+    --shadow-primary-100-lg: -10px 10px 0px 5px #ffd300;
+}
 
 @layer base {
     :root {
@@ -14,7 +23,9 @@
     }
 
     html {
-        @apply scroll-pt-[--header-height] scroll-smooth text-primary-300;
+        scroll-padding-top: var(--header-height);
+        scroll-behavior: smooth;
+        color: var(--color-primary-300);
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -32,20 +43,31 @@
     }
 }
 
-@layer components {
-    .h-header {
-        @apply h-[--header-height];
-    }
+@utility container {
+    margin-inline: auto;
+    max-width: 1280px;
+}
 
-    .h-footer {
-        @apply h-[--footer-height];
-    }
+@utility h-header {
+    height: var(--header-height);
+}
 
-    .section-height {
-        @apply min-h-[calc(100vh-var(--header-height))];
-    }
+@utility h-footer {
+    height: var(--footer-height);
+}
 
-    .last-section-height {
-        @apply min-h-[calc(100vh-var(--layout-height))];
-    }
+@utility section-height {
+    min-height: calc(100vh - var(--header-height));
+}
+
+@utility last-section-height {
+    min-height: calc(100vh - var(--layout-height));
+}
+
+@utility bg-noise {
+    background-image: url(/images/common/noise.png);
+}
+
+@utility shadow-primary-100-lg {
+    box-shadow: var(--shadow-primary-100-lg);
 }

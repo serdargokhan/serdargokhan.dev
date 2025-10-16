@@ -1,9 +1,8 @@
 import "../globals.css";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
-import { unstable_setRequestLocale as setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import type { Locale } from "@src/types";
 import { loadTranslations, nunitoFont } from "src/utils";
@@ -16,17 +15,13 @@ export function generateStaticParams(): { locale: Locale }[] {
     return siteConfig.locales.map(locale => ({ locale }));
 }
 
-type RootLayoutProps = {
-    children: ReactNode;
-    params: { locale: Locale };
-};
+export default async function RootLayout(props: LayoutProps<"/[locale]">) {
+    const params = await props.params;
+    const { locale } = params;
+    const { children } = props;
 
-export default async function RootLayout({
-    children,
-    params: { locale }
-}: RootLayoutProps) {
     setRequestLocale(locale);
-    const messages = await loadTranslations(locale);
+    const messages = await loadTranslations(locale as Locale);
 
     return (
         <html className={nunitoFont.className} lang={locale}>
@@ -47,9 +42,12 @@ export default async function RootLayout({
 
 const BASE_URL = "https://serdargokhan.dev";
 
-export async function generateMetadata({
-    params: { locale }
-}: Pick<RootLayoutProps, "params">): Promise<Metadata> {
+export async function generateMetadata(props: {
+    params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+    const params = await props.params;
+    const { locale } = params;
+
     const messages = await loadTranslations(locale);
 
     const t = createTranslator({ locale, messages });

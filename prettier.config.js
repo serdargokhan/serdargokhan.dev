@@ -4,7 +4,7 @@ const prettierConfig = {
     jsxSingleQuote: false,
     trailingComma: "none",
     arrowParens: "avoid",
-    plugins: ["prettier-plugin-tailwindcss"]
+    plugins: ["prettier-plugin-tailwindcss", "@prettier/plugin-oxc"]
 };
 
 export default prettierConfig;

@@ -1,13 +1,14 @@
 "use client";
 
-import { useRouter, usePathname } from "@src/i18n/routing";
+import { useRouter } from "@src/i18n/routing";
+import { useLocale } from "next-intl";
 import { Label, Switch } from "@src/components/ui";
 import { NextLink } from "@src/components/common";
 import { GithubIcon, LinkedinIcon, TwitterIcon } from "@src/icons";
 
 export default function Footer() {
     const router = useRouter();
-    const pathname = usePathname();
+    const locale = useLocale();
 
     return (
         <footer className="h-footer bg-primary-300 flex cursor-default items-center text-white">
@@ -41,7 +42,7 @@ export default function Footer() {
                         id="lang"
                         aria-label="Locale Switcher"
                         className="bg-primary-100 [&>span]:bg-primary-300 border-white"
-                        defaultChecked={pathname !== "/tr"}
+                        defaultChecked={locale === "en"}
                         onCheckedChange={checkedValue => {
                             router.push("/", {
                                 locale: checkedValue ? "en" : "tr"

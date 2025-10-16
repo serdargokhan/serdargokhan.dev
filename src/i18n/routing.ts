@@ -5,7 +5,9 @@ import siteConfig from "site.config";
 export const routing = defineRouting({
     locales: siteConfig.locales,
     defaultLocale: siteConfig.defaultLocale,
-    alternateLinks: false
+    alternateLinks: false,
+    localeDetection: false,
+    localePrefix: "as-needed"
 });
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

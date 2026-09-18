@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import ExternalLink from "@src/components/common/external-link";
 import CopyEmailButton from "./copy-email-button";
 
-const email = "gokhanbakirci5353@gmail.com";
+const email = "me@serdargokhan.dev";
 
 export default function ContactSection() {
     const t = useTranslations("Home.ContactSection");

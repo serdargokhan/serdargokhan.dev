@@ -10,7 +10,7 @@ export default function ContactSection() {
     return (
         <section className="flex items-center bg-cream bg-noise" id="contact">
             <div className="container grid gap-12 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-16 lg:py-28">
-                <div className="grid gap-5">
+                <div className="grid min-w-0 gap-5">
                     <h2 className="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
                         {t("title")}
                     </h2>
@@ -20,13 +20,13 @@ export default function ContactSection() {
                     </div>
                 </div>
 
-                <div className="border-2 border-ink bg-white p-6 shadow-brutal-blue sm:p-8">
+                <div className="min-w-0 border-2 border-ink bg-white p-6 shadow-brutal-blue sm:p-8">
                     <p className="font-mono text-xs font-semibold text-ink/70">
                         {t("email-label")}
                     </p>
                     <ExternalLink
                         href={`mailto:${email}`}
-                        className="mt-3 block font-mono text-lg font-semibold wrap-break-word text-blue underline decoration-2 underline-offset-4 transition-colors duration-150 ease-out hover:bg-yellow sm:text-xl"
+                        className="mt-3 block font-mono text-lg font-semibold wrap-anywhere text-blue underline decoration-2 underline-offset-4 transition-colors duration-150 ease-out hover:bg-yellow sm:text-xl"
                     >
                         {email}
                     </ExternalLink>

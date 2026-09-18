@@ -21,37 +21,53 @@ export default function ProjectItem({ category, item }: ProjectItemProps) {
     );
 
     return (
-        <article className="flex cursor-default flex-col gap-6 bg-white p-6 transition duration-300 hover:translate-x-4 hover:-translate-y-4 hover:shadow-primary-100-lg">
-            <h3 className="bg-primary-100 p-2 text-center font-semibold">
-                {item.title}
-            </h3>
-            <p>{description}</p>
-            <ul className="flex flex-wrap gap-2.5 text-primary-200">
-                {item.techStacks.map(techStack => (
-                    <li
-                        className="rounded-full border border-primary-200 px-3 py-1 text-sm"
-                        key={techStack}
-                    >
-                        {techStack}
-                    </li>
-                ))}
-            </ul>
+        <article className="group relative -mx-4 grid gap-6 border-b-2 border-white/15 px-4 py-8 md:grid-cols-[minmax(0,1fr)_auto] md:items-start md:gap-10 md:py-10">
+            <span
+                aria-hidden="true"
+                className="absolute inset-y-0 left-0 w-1 origin-top scale-y-0 bg-yellow group-hover:scale-y-100 motion-safe:transition-transform motion-safe:duration-200 motion-safe:ease-out"
+            />
+            <div>
+                <h3 className="text-2xl font-extrabold tracking-tight text-white transition-colors duration-150 ease-out group-hover:text-yellow sm:text-3xl">
+                    {item.title}
+                </h3>
+                <p className="mt-3 max-w-prose text-pretty text-white/70">
+                    {description}
+                </p>
+                <ul className="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                    {item.techStacks.map(techStack => (
+                        <li
+                            className="border border-white/40 px-2.5 py-1 text-white/70"
+                            key={techStack}
+                        >
+                            {techStack}
+                        </li>
+                    ))}
+                </ul>
+            </div>
 
-            <div className="mt-auto flex justify-end gap-4">
+            <div className="flex flex-wrap items-center gap-x-7 gap-y-3 md:flex-col md:items-end md:gap-4">
                 <ExternalLink
                     href={item.websiteLink}
-                    className="group flex w-1/2 items-center justify-around rounded-lg border-2 border-primary-300 px-4 py-2 hover:bg-primary-300 hover:text-white md:w-1/3"
+                    className="group/action inline-flex items-center gap-2 font-mono text-sm font-medium text-white/70 transition-colors duration-150 ease-out group-hover:text-white hover:text-yellow"
                 >
-                    <span>{t("actions.visit-website")}</span>
-                    <ExternalLinkIcon className="h-8 w-8 fill-primary-300 transition group-hover:fill-white" />
+                    {t("actions.visit-website")}
+                    <span className="sr-only">: {item.title}</span>
+                    <ExternalLinkIcon
+                        aria-hidden="true"
+                        className="h-4 w-4 fill-current transition-transform duration-150 ease-out group-hover/action:translate-x-0.5 group-hover/action:-translate-y-0.5"
+                    />
                 </ExternalLink>
 
                 <ExternalLink
                     href={item.sourceLink}
-                    className="group flex w-1/2 items-center justify-around rounded-lg border-2 border-primary-300 px-4 py-2 hover:bg-primary-300 hover:text-white md:w-1/3"
+                    className="group/action inline-flex items-center gap-2 font-mono text-sm font-medium text-white/70 transition-colors duration-150 ease-out group-hover:text-white hover:text-yellow"
                 >
-                    <span>{t("actions.source-code")}</span>
-                    <GithubIcon className="h-8 w-8 fill-primary-300 transition group-hover:fill-white" />
+                    {t("actions.source-code")}
+                    <span className="sr-only">: {item.title}</span>
+                    <GithubIcon
+                        aria-hidden="true"
+                        className="h-4 w-4 fill-current"
+                    />
                 </ExternalLink>
             </div>
         </article>

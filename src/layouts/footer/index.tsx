@@ -14,7 +14,7 @@ export default function Footer() {
     const locale = useLocale();
 
     return (
-        <footer className="flex h-footer cursor-default items-center bg-primary-300 text-white">
+        <footer className="flex h-footer items-center bg-ink text-white">
             <div className="container flex items-center justify-between text-sm">
                 <div className="flex items-center gap-2.5">
                     <ExternalLink
@@ -23,7 +23,7 @@ export default function Footer() {
                     >
                         <GithubIcon
                             aria-hidden="true"
-                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
                         />
                     </ExternalLink>
                     <ExternalLink
@@ -32,7 +32,7 @@ export default function Footer() {
                     >
                         <LinkedinIcon
                             aria-hidden="true"
-                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
                         />
                     </ExternalLink>
                     <ExternalLink
@@ -41,7 +41,7 @@ export default function Footer() {
                     >
                         <TwitterIcon
                             aria-hidden="true"
-                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
                         />
                     </ExternalLink>
                 </div>
@@ -49,7 +49,7 @@ export default function Footer() {
                     Made with ❤️ © {new Date().getFullYear()}
                 </p>
                 <div className="flex items-center space-x-2 font-semibold">
-                    <Label>Türkçe</Label>
+                    <Label lang="tr">Türkçe</Label>
                     <Switch
                         id="lang"
                         aria-label={
@@ -57,7 +57,7 @@ export default function Footer() {
                                 ? "Switch to Turkish"
                                 : "Switch to English"
                         }
-                        className="border-white bg-primary-100 [&>span]:bg-primary-300"
+                        className="border-white bg-yellow [&>span]:bg-ink"
                         checked={locale === "en"}
                         onCheckedChange={checkedValue => {
                             router.push("/", {
@@ -65,7 +65,7 @@ export default function Footer() {
                             });
                         }}
                     />
-                    <Label>English</Label>
+                    <Label lang="en">English</Label>
                 </div>
             </div>
         </footer>

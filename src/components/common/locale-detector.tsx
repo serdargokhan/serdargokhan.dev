@@ -32,10 +32,13 @@ export default function LocaleDetector() {
 
     return (
         <div
+            role="region"
+            aria-label="Dil önerisi"
+            lang="tr"
             className={cn(
-                "border-primary-100 text-primary-300 invisible fixed inset-0 top-auto translate-y-8 border-t-2 bg-white py-4 opacity-0",
+                "invisible fixed inset-0 top-auto translate-y-8 border-t-2 border-yellow bg-white py-4 text-ink opacity-0",
                 showLocaleDetector &&
-                    "visible translate-y-0 opacity-100 transition delay-1000 duration-300 ease-in"
+                    "visible translate-y-0 opacity-100 motion-safe:transition-[translate,opacity] motion-safe:delay-400 motion-safe:duration-200 motion-safe:ease-out"
             )}
         >
             <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
@@ -44,11 +47,11 @@ export default function LocaleDetector() {
                     içerik deneyimi için dilinizi Türkçe yapabilirsiniz.
                 </p>
                 <div className="flex items-center gap-4 max-md:w-full">
-                    <div className="group inline-block max-md:flex-1">
+                    <div className="inline-block max-md:flex-1">
                         <button
                             type="button"
                             onClick={() => router.push("/", { locale: "tr" })}
-                            className="inline-block w-full rounded-md border border-primary-300 bg-white px-4 py-1.5 font-semibold transition duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[-4px_4px_0px_0px_#3a10e5]"
+                            className="inline-block w-full press rounded-md border border-ink bg-white px-4 py-1.5 font-semibold hover:shadow-brutal-blue motion-safe:hover-fine:translate-x-1 motion-safe:hover-fine:-translate-y-1"
                         >
                             Devam
                         </button>
@@ -56,7 +59,7 @@ export default function LocaleDetector() {
                     <button
                         type="button"
                         aria-label="Dismiss language suggestion"
-                        className="rounded-full border border-primary-300 p-1.5 transition hover:bg-primary-200 hover:text-white"
+                        className="rounded-full border border-ink p-1.5 transition-colors duration-150 ease-out hover:bg-blue hover:text-white"
                         onClick={() => {
                             localStorage.setItem("locale-preference", "deny");
                             setDismissed(true);

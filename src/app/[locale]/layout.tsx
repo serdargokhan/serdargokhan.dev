@@ -6,7 +6,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import type { Locale } from "@src/types/locale";
 import { loadTranslations } from "@src/utils/load-translations";
-import { nunitoFont } from "@src/utils/fonts";
+import { nunitoFont, plexMonoFont } from "@src/utils/fonts";
 import LocaleDetector from "@src/components/common/locale-detector";
 import Navbar from "@src/layouts/navbar";
 import Footer from "@src/layouts/footer";
@@ -24,7 +24,7 @@ export default async function RootLayout(props: LayoutProps<"/[locale]">) {
 
     return (
         <html
-            className={nunitoFont.className}
+            className={`${nunitoFont.className} ${plexMonoFont.variable}`}
             lang={locale}
             data-scroll-behavior="smooth"
         >

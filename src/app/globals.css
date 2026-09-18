@@ -1,14 +1,29 @@
 @import "tailwindcss";
 
+@custom-variant hover-fine {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @slot;
+        }
+    }
+}
+
 @theme {
-    --color-primary-100: #ffd300;
-    --color-primary-200: #3a10e5;
-    --color-primary-300: #10162f;
-    --color-primary-400: #fff0e5;
+    --color-ink: #10162f;
+    --color-blue: #3a10e5;
+    --color-yellow: #ffd300;
+    --color-cream: #fff0e5;
+
+    --font-mono:
+        var(--font-plex-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
 
     --breakpoint-xs: 475px;
 
-    --shadow-primary-100-lg: -10px 10px 0px 5px var(--color-primary-100);
+    --shadow-brutal-yellow: -8px 8px 0 0 var(--color-yellow);
+    --shadow-brutal-blue: -8px 8px 0 0 var(--color-blue);
+
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @layer base {
@@ -16,29 +31,47 @@
         --header-height: 64px;
         --footer-height: 64px;
         --layout-height: calc(var(--header-height) + var(--footer-height));
+        color-scheme: light;
     }
 
-    * {
+    :where(
+        a,
+        button,
+        label,
+        summary,
+        input,
+        select,
+        textarea,
+        [role="button"]
+    ) {
         -webkit-tap-highlight-color: transparent;
     }
 
     html {
         scroll-padding-top: var(--header-height);
         scroll-behavior: smooth;
-        color: var(--color-primary-300);
+        color: var(--color-ink);
+    }
+
+    body {
+        background-color: var(--color-cream);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: default;
+    }
+
+    :where(a[href], button, summary, [role="button"]) {
+        cursor: pointer;
+    }
+
+    :focus-visible {
+        outline: 3px solid currentColor;
+        outline-offset: 3px;
     }
 
     @media (prefers-reduced-motion: reduce) {
-        *,
-        ::before,
-        ::after {
-            animation-delay: -1ms !important;
-            animation-duration: 1ms !important;
-            animation-iteration-count: 1 !important;
-            background-attachment: initial !important;
-            scroll-behavior: auto !important;
-            transition-duration: 0s !important;
-            transition-delay: 0s !important;
+        html {
+            scroll-behavior: auto;
         }
     }
 }
@@ -46,7 +79,7 @@
 @utility container {
     margin-inline: auto;
     padding-inline: 1.5rem;
-    max-width: 1280px;
+    max-width: 1180px;
 }
 
 @utility h-header {
@@ -57,14 +90,55 @@
     height: var(--footer-height);
 }
 
-@utility section-height {
-    min-height: calc(100vh - var(--header-height));
-}
-
-@utility last-section-height {
-    min-height: calc(100vh - var(--layout-height));
-}
-
 @utility bg-noise {
     background-image: url(/images/common/noise.png);
+}
+
+@utility press {
+    transition-property:
+        translate, scale, box-shadow, color, background-color, border-color;
+    transition-duration: 150ms;
+    transition-timing-function: var(--ease-out);
+
+    &:active {
+        scale: 0.97;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .rise-in {
+        transition: translate 400ms var(--ease-out);
+
+        @starting-style {
+            translate: 0 14px;
+        }
+    }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+        animation: none;
+    }
+
+    ::view-transition-group(.projects-fade) {
+        animation-duration: 150ms;
+    }
+
+    ::view-transition-image-pair(.projects-fade) {
+        animation-name: projects-blur;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-old(*),
+    ::view-transition-new(*),
+    ::view-transition-group(*) {
+        animation-duration: 0s !important;
+        animation-delay: 0s !important;
+    }
+}
+
+@keyframes projects-blur {
+    30% {
+        filter: blur(2px);
+    }
 }

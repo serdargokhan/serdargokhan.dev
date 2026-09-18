@@ -5,12 +5,12 @@ import ReactIcon from "@src/icons/react";
 export const categoryButtons = [
     {
         id: "nextjs",
-        title: "Next JS",
+        title: "Next.js",
         icon: NextIcon
     },
     {
         id: "reactjs",
-        title: "React JS",
+        title: "React.js",
         icon: ReactIcon
     },
     {
@@ -20,7 +20,7 @@ export const categoryButtons = [
     },
     {
         id: "javascript",
-        title: "Javascript",
+        title: "JavaScript",
         icon: JavascriptIcon
     }
 ] as const;

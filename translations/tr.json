@@ -79,7 +79,10 @@
             "title": "İletişime Geçin",
             "paragraph-one": "Herhangi bir sorunuz varsa veya potansiyel bir proje hakkında bilgi almak istiyorsanız, aşağıda verdiğim iletişim e-postası aracılığıyla bana ulaşmaktan çekinmeyin. İşbirliğine her zaman açığım ve yeni müşterilerle çalışmaktan keyif alıyorum.",
             "paragraph-two": "Ayrıca, sadece bağlantı kurmak istiyorsanız veya çalışmalarım hakkında herhangi bir sorunuz varsa, bana bir mesaj göndermekten çekinmeyin. Sizden haber almak için sabırsızlanıyorum!",
-            "cta": "Merhaba!"
+            "cta": "Merhaba!",
+            "email-label": "E-posta",
+            "copy-email": "E-postayı kopyala",
+            "copied": "Kopyalandı"
         }
     },
     "Navigation": {

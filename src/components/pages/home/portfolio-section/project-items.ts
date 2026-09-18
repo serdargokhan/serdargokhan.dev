@@ -94,7 +94,7 @@ export const projectItems: {
         },
         {
             id: "resipe-search",
-            title: "Resipe Search",
+            title: "Recipe Search",
             websiteLink: "https://serdargokhan-react-recipe.netlify.app",
             sourceLink:
                 "https://github.com/serdargokhan/react-projects/tree/main/1-basic-recipe-app",

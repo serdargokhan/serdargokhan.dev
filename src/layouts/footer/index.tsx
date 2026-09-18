@@ -19,40 +19,53 @@ export default function Footer() {
                 <div className="flex items-center gap-2.5">
                     <ExternalLink
                         href="https://github.com/serdargokhan"
-                        title="Github"
+                        aria-label="GitHub"
                     >
-                        <GithubIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                        <GithubIcon
+                            aria-hidden="true"
+                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                        />
                     </ExternalLink>
                     <ExternalLink
                         href="https://www.linkedin.com/in/serdarrgokhann"
-                        title="Linkedin"
+                        aria-label="LinkedIn"
                     >
-                        <LinkedinIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                        <LinkedinIcon
+                            aria-hidden="true"
+                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                        />
                     </ExternalLink>
                     <ExternalLink
                         href="https://twitter.com/serdarrgokhann"
-                        title="Twitter"
+                        aria-label="Twitter"
                     >
-                        <TwitterIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                        <TwitterIcon
+                            aria-hidden="true"
+                            className="h-8 w-8 fill-white transition hover:fill-primary-100"
+                        />
                     </ExternalLink>
                 </div>
                 <p className="hidden sm:inline-block">
                     Made with ❤️ © {new Date().getFullYear()}
                 </p>
                 <div className="flex items-center space-x-2 font-semibold">
-                    <Label htmlFor="lang">Türkçe</Label>
+                    <Label>Türkçe</Label>
                     <Switch
                         id="lang"
-                        aria-label="Locale Switcher"
+                        aria-label={
+                            locale === "en"
+                                ? "Switch to Turkish"
+                                : "Switch to English"
+                        }
                         className="border-white bg-primary-100 [&>span]:bg-primary-300"
-                        defaultChecked={locale === "en"}
+                        checked={locale === "en"}
                         onCheckedChange={checkedValue => {
                             router.push("/", {
                                 locale: checkedValue ? "en" : "tr"
                             });
                         }}
                     />
-                    <Label htmlFor="lang">English</Label>
+                    <Label>English</Label>
                 </div>
             </div>
         </footer>

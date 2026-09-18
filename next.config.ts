@@ -1,5 +1,23 @@
-import { NextConfig } from "next";
+import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+
+const isDev = process.env.NODE_ENV === "development";
+
+const contentSecurityPolicy = `
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval' " : ""}https://va.vercel-scripts.com https://vercel.live;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' data: blob:;
+    font-src 'self';
+    connect-src 'self' https://va.vercel-scripts.com https://vitals.vercel-insights.com https://vercel.live wss://ws.vercel.live;
+    media-src 'none';
+    object-src 'none';
+    base-uri 'self';
+    form-action 'self';
+    frame-ancestors 'none';
+    frame-src 'self' https://vercel.live;
+    upgrade-insecure-requests;
+`;
 
 const nextConfig = {
     async headers() {
@@ -12,20 +30,10 @@ const nextConfig = {
     }
 } satisfies NextConfig;
 
-const contentSecurityPolicy = `
-    default-src 'self' vercel.live;
-    script-src 'self' 'unsafe-eval' 'unsafe-inline' https://va.vercel-scripts.com cdn.vercel-insights.com vercel.live;
-    style-src 'self' 'unsafe-inline';
-    img-src * blob: data:;
-    media-src 'none';
-    connect-src *;
-    font-src 'self';
-`;
-
 const securityHeaders = [
     {
         key: "Content-Security-Policy",
-        value: contentSecurityPolicy.replace(/\n/g, "")
+        value: contentSecurityPolicy.replace(/\s+/g, " ").trim()
     },
     {
         key: "Referrer-Policy",

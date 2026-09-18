@@ -21,7 +21,7 @@ export default function GreetingSection() {
                             link: children => (
                                 <ExternalLink
                                     href="https://www.borusanotomotiv.com/"
-                                    className="hover: text-primary-200 underline-offset-2 hover:cursor-pointer hover:underline"
+                                    className="underline-offset-2 hover:text-primary-200 hover:underline"
                                 >
                                     {children}
                                 </ExternalLink>

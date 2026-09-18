@@ -10,7 +10,7 @@ import { nunitoFont } from "@src/utils/fonts";
 import LocaleDetector from "@src/components/common/locale-detector";
 import Navbar from "@src/layouts/navbar";
 import Footer from "@src/layouts/footer";
-import siteConfig from "../../../site.config";
+import siteConfig, { localeUrl } from "../../../site.config";
 
 export function generateStaticParams(): { locale: Locale }[] {
     return siteConfig.locales.map(locale => ({ locale }));
@@ -20,7 +20,7 @@ export default async function RootLayout(props: LayoutProps<"/[locale]">) {
     const { children } = props;
     const locale = await getLocale();
 
-    const messages = await loadTranslations(locale as Locale);
+    const messages = await loadTranslations(locale);
 
     return (
         <html
@@ -43,20 +43,26 @@ export default async function RootLayout(props: LayoutProps<"/[locale]">) {
     );
 }
 
-const BASE_URL = "https://serdargokhan.dev";
+const ogLocale = (locale: Locale) => (locale === "tr" ? "tr_TR" : "en_US");
 
 export async function generateMetadata(props: {
     params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
-    const params = await props.params;
-    const { locale } = params;
+    const { locale } = await props.params;
 
     const messages = await loadTranslations(locale);
 
     const t = createTranslator({ locale, messages });
 
+    const languages: Record<string, string> = {
+        "x-default": siteConfig.baseUrl
+    };
+    for (const code of siteConfig.locales) {
+        languages[code] = localeUrl(code);
+    }
+
     return {
-        metadataBase: new URL(BASE_URL),
+        metadataBase: new URL(siteConfig.baseUrl),
         title: {
             default: t("default-seo-title"),
             template: "%s | Serdar Gökhan"
@@ -64,15 +70,15 @@ export async function generateMetadata(props: {
         description: t("default-seo-description"),
         icons: {
             shortcut: "/favicon.ico",
-            apple: "static/apple-icon.png",
+            apple: "/static/apple-icon.png",
             other: [
                 {
-                    url: "static/favicon-32x32.png",
+                    url: "/static/favicon-32x32.png",
                     sizes: "32x32",
                     type: "image/png"
                 },
                 {
-                    url: "static/favicon-16x16.png",
+                    url: "/static/favicon-16x16.png",
                     sizes: "16x16",
                     type: "image/png"
                 }
@@ -90,27 +96,25 @@ export async function generateMetadata(props: {
             }
         },
         alternates: {
-            languages: {
-                "x-default": BASE_URL,
-                en: `${BASE_URL}/en`,
-                tr: `${BASE_URL}/tr`
-            },
-            canonical: BASE_URL
+            languages,
+            canonical: localeUrl(locale)
         },
         verification: {
             google: "UJthXaWw4SK7do_wKDjzQXss3tPHWfF0dXCBjfQrZek"
         },
         twitter: {
             card: "summary_large_image",
-            creator: "@serdarrgokhann"
+            creator: "@serdarrgokhann",
+            images: ["/opengraph-image.jpg"]
         },
         openGraph: {
             title: "Serdar Gökhan",
             description: t("default-seo-description"),
-            url: `${BASE_URL}/${locale}`,
+            url: localeUrl(locale),
             siteName: "Serdar Gökhan",
-            locale,
-            type: "website"
+            locale: ogLocale(locale),
+            type: "website",
+            images: ["/opengraph-image.jpg"]
         }
     };
 }

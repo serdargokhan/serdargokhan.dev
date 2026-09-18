@@ -1,11 +1,12 @@
 import type { MetadataRoute } from "next";
+import siteConfig from "../../site.config";
 
 export default function robots(): MetadataRoute.Robots {
     return {
         rules: {
             userAgent: "*"
         },
-        sitemap: "https://serdargokhan.dev/sitemap.xml",
-        host: "https://serdargokhan.dev"
+        sitemap: `${siteConfig.baseUrl}/sitemap.xml`,
+        host: siteConfig.baseUrl
     };
 }

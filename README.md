@@ -6,11 +6,11 @@
 ✨ My portfolio website built with <a href="https://nextjs.org" target="_blank">NextJS</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>, and shipped with <a href="https://vercel.com" target="_blank">Vercel</a>.
 </p>
 
-![Image 1](./src/app/opengraph-image.jpg)
+![Image 1](./public/opengraph-image.jpg)
 
 ## 🛠 Installation & Set Up
 
-This application requires Node.js v18+.
+This application requires Node.js v20.19+ or v22.12+.
 
 1. Clone the repository
 
@@ -62,20 +62,23 @@ serdargokhan.dev
 │   └── static
 ├── src
 │   ├── app
-│   │   └── [locale]
+│   │   ├── [locale]
+│   │   ├── robots.ts
+│   │   └── sitemap.ts
 │   ├── components
 │   │   ├── common
 │   │   ├── pages
 │   │   │   └── home
-│   │   │       ├── AboutSection
-│   │   │       ├── ContactSection
-│   │   │       ├── GreetingSection
-│   │   │       └── PortfolioSection
+│   │   │       ├── about-section
+│   │   │       ├── contact-section
+│   │   │       ├── greeting-section
+│   │   │       └── portfolio-section
 │   │   └── ui
+│   ├── i18n
 │   ├── icons
 │   ├── layouts
-│   │   ├── Footer
-│   │   └── Navbar
+│   │   ├── footer
+│   │   └── navbar
 │   ├── types
 │   └── utils
 └── translations

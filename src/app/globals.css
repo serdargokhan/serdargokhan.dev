@@ -68,7 +68,3 @@
 @utility bg-noise {
     background-image: url(/images/common/noise.png);
 }
-
-@utility shadow-primary-100-lg {
-    box-shadow: var(--shadow-primary-100-lg);
-}

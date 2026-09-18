@@ -1,30 +1,33 @@
 import "../globals.css";
 import { NextIntlClientProvider, createTranslator } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getLocale } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
-import type { Locale } from "@src/types";
-import { loadTranslations, nunitoFont } from "src/utils";
-import { LocaleDetector } from "@src/components/common";
-import Navbar from "@src/layouts/Navbar";
-import Footer from "@src/layouts/Footer";
-import siteConfig from "site.config";
+import type { Locale } from "@src/types/locale";
+import { loadTranslations } from "@src/utils/load-translations";
+import { nunitoFont } from "@src/utils/fonts";
+import LocaleDetector from "@src/components/common/locale-detector";
+import Navbar from "@src/layouts/navbar";
+import Footer from "@src/layouts/footer";
+import siteConfig from "../../../site.config";
 
 export function generateStaticParams(): { locale: Locale }[] {
     return siteConfig.locales.map(locale => ({ locale }));
 }
 
 export default async function RootLayout(props: LayoutProps<"/[locale]">) {
-    const params = await props.params;
-    const { locale } = params;
     const { children } = props;
+    const locale = await getLocale();
 
-    setRequestLocale(locale);
     const messages = await loadTranslations(locale as Locale);
 
     return (
-        <html className={nunitoFont.className} lang={locale}>
+        <html
+            className={nunitoFont.className}
+            lang={locale}
+            data-scroll-behavior="smooth"
+        >
             <body>
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <Navbar />

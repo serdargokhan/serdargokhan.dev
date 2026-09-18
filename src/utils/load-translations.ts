@@ -1,4 +1,4 @@
-import type { Locale } from "@src/types";
+import type { Locale } from "@src/types/locale";
 import { cache } from "react";
 
 export const loadTranslations = cache(async (locale: Locale) => {

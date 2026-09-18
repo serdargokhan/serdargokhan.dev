@@ -1,7 +1,7 @@
-import GreetingSection from "@src/components/pages/home/GreetingSection";
-import AboutSection from "@src/components/pages/home/AboutSection";
-import PortfolioSection from "@src/components/pages/home/PortfolioSection";
-import ContactSection from "@src/components/pages/home/ContactSection";
+import GreetingSection from "@src/components/pages/home/greeting-section";
+import AboutSection from "@src/components/pages/home/about-section";
+import PortfolioSection from "@src/components/pages/home/portfolio-section";
+import ContactSection from "@src/components/pages/home/contact-section";
 
 export default function Page() {
     return (

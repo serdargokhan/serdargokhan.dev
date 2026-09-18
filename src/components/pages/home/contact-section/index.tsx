@@ -1,7 +1,6 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { NextImage, NextLink } from "@src/components/common";
+import NextImage from "@src/components/common/next-image";
+import NextLink from "@src/components/common/next-link";
 import ContactImage from "@public/images/pages/home/contact.svg";
 
 export default function ContactSection() {
@@ -9,7 +8,7 @@ export default function ContactSection() {
 
     return (
         <section
-            className="last-section-height flex items-center bg-primary-400 bg-noise"
+            className="flex last-section-height items-center bg-primary-400 bg-noise"
             id="contact"
         >
             <div className="container grid cursor-default place-items-center gap-12 max-lg:py-12 lg:grid-cols-2 lg:gap-20">
@@ -21,7 +20,7 @@ export default function ContactSection() {
                     <p>{t("paragraph-two")}</p>
                     <div className="group inline-block w-fit">
                         <NextLink
-                            className="inline-block rounded-md border border-primary-300 bg-white px-4 py-2.5 font-semibold transition duration-200 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:shadow-[-4px_4px_0px_0px_#3a10e5]"
+                            className="inline-block rounded-md border border-primary-300 bg-white px-4 py-2.5 font-semibold transition duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[-4px_4px_0px_0px_#3a10e5]"
                             href="mailto:gokhan_bakirci_53@hotmail.com"
                         >
                             {t("cta")}

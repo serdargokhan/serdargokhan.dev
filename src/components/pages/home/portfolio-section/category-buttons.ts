@@ -1,4 +1,6 @@
-import { JavascriptIcon, NextIcon, ReactIcon } from "@src/icons";
+import JavascriptIcon from "@src/icons/javascript";
+import NextIcon from "@src/icons/next";
+import ReactIcon from "@src/icons/react";
 
 export const categoryButtons = [
     {

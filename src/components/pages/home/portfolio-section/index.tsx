@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { cn } from "@src/utils";
-import { Category, projectItems } from "./projectItems";
-import { categoryButtons } from "./categoryButtons";
-import ProjectItem from "./ProjectItem";
+import { cn } from "@src/utils/cn";
+import { Category, projectItems } from "./project-items";
+import { categoryButtons } from "./category-buttons";
+import ProjectItem from "./project-item";
 
 export default function PortfolioSection() {
     const [category, setCategory] = useState<Category>("nextjs");
@@ -13,7 +13,7 @@ export default function PortfolioSection() {
     const t = useTranslations("Home.PortfolioSection");
 
     return (
-        <section className="section-height grid bg-primary-300" id="projects">
+        <section className="grid section-height bg-primary-300" id="projects">
             <div className="container py-12 lg:py-20">
                 <h2 className="text-3xl font-bold text-white md:text-6xl">
                     {t("title")}
@@ -41,13 +41,8 @@ export default function PortfolioSection() {
                     {projectItems[category].map(projectItem => (
                         <ProjectItem
                             key={projectItem.sourceLink}
-                            title={projectItem.title}
-                            websiteLink={projectItem.websiteLink}
-                            sourceLink={projectItem.sourceLink}
-                            description={t(
-                                `projects.${category}.${projectItem.id}.description` as any
-                            )}
-                            techStacks={projectItem.techStacks}
+                            category={category}
+                            item={projectItem}
                         />
                     ))}
                 </div>

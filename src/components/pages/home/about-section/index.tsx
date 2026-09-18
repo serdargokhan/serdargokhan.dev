@@ -1,7 +1,5 @@
-"use client";
-
 import { useTranslations } from "next-intl";
-import { NextImage } from "@src/components/common";
+import NextImage from "@src/components/common/next-image";
 import AboutMeImage from "@public/images/pages/home/about-me.svg";
 
 export default function AboutSection() {
@@ -9,7 +7,7 @@ export default function AboutSection() {
 
     return (
         <section
-            className="section-height flex items-center bg-primary-200"
+            className="flex section-height items-center bg-primary-200"
             id="about"
         >
             <div className="container grid cursor-default place-items-center gap-12 py-12 lg:grid-cols-2 lg:gap-20 lg:py-20">

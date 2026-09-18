@@ -1,34 +1,49 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { cn } from "@src/utils";
-import { NextImage, NextLink } from "@src/components/common";
+import { cn } from "@src/utils/cn";
+import NextImage from "@src/components/common/next-image";
+import NextLink from "@src/components/common/next-link";
 import SiteLogo from "@public/images/common/site-logo.svg";
 
 const navigationLinks = ["about", "projects", "contact"] as const;
 
+function subscribeToHash(onStoreChange: () => void) {
+    window.addEventListener("hashchange", onStoreChange);
+    return () => window.removeEventListener("hashchange", onStoreChange);
+}
+
+function getHashLink() {
+    return window.location.hash.slice(1);
+}
+
 export default function Navbar() {
-    const [activeLink, setActiveLink] = useState("");
+    const hashLink = useSyncExternalStore(
+        subscribeToHash,
+        getHashLink,
+        () => ""
+    );
+    const [activeLink, setActiveLink] = useState<string | null>(null);
+
+    const currentLink = activeLink ?? hashLink;
 
     const locale = useLocale();
     const t = useTranslations("Navigation");
 
     useEffect(() => {
         if (window.location.hash) {
-            setActiveLink(window.location.hash.slice(1));
-            const section = document.querySelector(window.location.hash);
-            section?.scrollIntoView({
-                behavior: "smooth"
-            });
+            document
+                .querySelector(window.location.hash)
+                ?.scrollIntoView({ behavior: "smooth" });
         }
     }, []);
 
     return (
-        <nav className="h-header border-primary-100 bg-primary-300 sticky top-0 z-50 flex items-center border-b-2">
+        <nav className="sticky top-0 z-50 flex h-header items-center border-b-2 border-primary-100 bg-primary-300">
             <div className="container flex items-center justify-between">
                 <NextLink
-                    className="bg-primary-100 rounded-full p-1"
+                    className="rounded-full bg-primary-100 p-1"
                     href="#"
                     title=""
                     onClick={() => setActiveLink("")}
@@ -42,7 +57,7 @@ export default function Navbar() {
                     />
                 </NextLink>
 
-                <ul className="xs:flex hidden items-center justify-between gap-2 font-medium text-white sm:gap-6">
+                <ul className="hidden items-center justify-between gap-2 font-medium text-white xs:flex sm:gap-6">
                     {navigationLinks.map(navigationLink => (
                         <li key={navigationLink}>
                             <NextLink
@@ -50,7 +65,7 @@ export default function Navbar() {
                                 onClick={() => setActiveLink(navigationLink)}
                                 className={cn(
                                     "py-1 decoration-2 underline-offset-8",
-                                    activeLink === navigationLink
+                                    currentLink === navigationLink
                                         ? "text-primary-100 underline"
                                         : "hover:text-primary-100 transition hover:underline"
                                 )}
@@ -63,7 +78,7 @@ export default function Navbar() {
 
                 <div className="group inline-block">
                     <NextLink
-                        className="border-primary-300 inline-block rounded-md border bg-white px-4 py-1.5 font-medium transition duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[-4px_4px_0px_0px_#ffd300]"
+                        className="inline-block rounded-md border border-primary-300 bg-white px-4 py-1.5 font-medium transition duration-200 group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:shadow-[-4px_4px_0px_0px_#ffd300]"
                         href={
                             locale === "tr"
                                 ? "/static/Serdar-Gökhan-BAKIRCI-TR.pdf"

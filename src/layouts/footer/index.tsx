@@ -1,37 +1,40 @@
 "use client";
 
-import { useRouter } from "@src/i18n/routing";
+import { useRouter } from "@src/i18n/navigation";
 import { useLocale } from "next-intl";
-import { Label, Switch } from "@src/components/ui";
-import { NextLink } from "@src/components/common";
-import { GithubIcon, LinkedinIcon, TwitterIcon } from "@src/icons";
+import { Label } from "@src/components/ui/label";
+import { Switch } from "@src/components/ui/switch";
+import ExternalLink from "@src/components/common/external-link";
+import GithubIcon from "@src/icons/github";
+import LinkedinIcon from "@src/icons/linkedin";
+import TwitterIcon from "@src/icons/twitter";
 
 export default function Footer() {
     const router = useRouter();
     const locale = useLocale();
 
     return (
-        <footer className="h-footer bg-primary-300 flex cursor-default items-center text-white">
+        <footer className="flex h-footer cursor-default items-center bg-primary-300 text-white">
             <div className="container flex items-center justify-between text-sm">
                 <div className="flex items-center gap-2.5">
-                    <NextLink
+                    <ExternalLink
                         href="https://github.com/serdargokhan"
                         title="Github"
                     >
-                        <GithubIcon className="hover:fill-primary-100 h-8 w-8 fill-white transition" />
-                    </NextLink>
-                    <NextLink
+                        <GithubIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                    </ExternalLink>
+                    <ExternalLink
                         href="https://www.linkedin.com/in/serdarrgokhann"
                         title="Linkedin"
                     >
-                        <LinkedinIcon className="hover:fill-primary-100 h-8 w-8 fill-white transition" />
-                    </NextLink>
-                    <NextLink
+                        <LinkedinIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                    </ExternalLink>
+                    <ExternalLink
                         href="https://twitter.com/serdarrgokhann"
                         title="Twitter"
                     >
-                        <TwitterIcon className="hover:fill-primary-100 h-8 w-8 fill-white transition" />
-                    </NextLink>
+                        <TwitterIcon className="h-8 w-8 fill-white transition hover:fill-primary-100" />
+                    </ExternalLink>
                 </div>
                 <p className="hidden sm:inline-block">
                     Made with ❤️ © {new Date().getFullYear()}
@@ -41,7 +44,7 @@ export default function Footer() {
                     <Switch
                         id="lang"
                         aria-label="Locale Switcher"
-                        className="bg-primary-100 [&>span]:bg-primary-300 border-white"
+                        className="border-white bg-primary-100 [&>span]:bg-primary-300"
                         defaultChecked={locale === "en"}
                         onCheckedChange={checkedValue => {
                             router.push("/", {

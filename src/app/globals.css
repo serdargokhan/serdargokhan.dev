@@ -8,7 +8,7 @@
 
     --breakpoint-xs: 475px;
 
-    --shadow-primary-100-lg: -10px 10px 0px 5px #ffd300;
+    --shadow-primary-100-lg: -10px 10px 0px 5px var(--color-primary-100);
 }
 
 @layer base {

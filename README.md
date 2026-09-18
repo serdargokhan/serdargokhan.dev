@@ -80,12 +80,3 @@ serdargokhan.dev
 │   └── utils
 └── translations
 ```
-
-## 🎨 Color Reference
-
-| Color       | Hex                                                                |
-| ----------- | ------------------------------------------------------------------ |
-| Primary-100 | ![#ffd300](https://via.placeholder.com/10/ffd300?text=+) `#ffd300` |
-| Primary-200 | ![#3a10e5](https://via.placeholder.com/10/3a10e5?text=+) `#3a10e5` |
-| Primary-300 | ![#10162f](https://via.placeholder.com/10/10162f?text=+) `#10162f` |
-| Primary-400 | ![#fff0e5](https://via.placeholder.com/10/fff0e5?text=+) `#fff0e5` |

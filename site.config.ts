@@ -1,4 +1,4 @@
-import { Locale } from "@src/types";
+import { Locale } from "@src/types/locale";
 
 type Config = {
     locales: Locale[];

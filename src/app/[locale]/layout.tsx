@@ -1,12 +1,13 @@
 import "../globals.css";
-import { NextIntlClientProvider, createTranslator } from "next-intl";
-import { getLocale } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import type { Locale } from "@src/types/locale";
-import { loadTranslations } from "@src/utils/load-translations";
+import { loadClientTranslations } from "@src/utils/load-translations";
 import { nunitoFont, plexMonoFont } from "@src/utils/fonts";
+import { routing } from "@src/i18n/routing";
 import LocaleDetector from "@src/components/common/locale-detector";
 import SkipToContent from "@src/components/common/skip-to-content";
 import Navbar from "@src/layouts/navbar";
@@ -14,14 +15,14 @@ import Footer from "@src/layouts/footer";
 import siteConfig, { localeUrl } from "../../../site.config";
 
 export function generateStaticParams(): { locale: Locale }[] {
-    return siteConfig.locales.map(locale => ({ locale }));
+    return routing.locales.map(locale => ({ locale }));
 }
 
 export default async function RootLayout(props: LayoutProps<"/[locale]">) {
     const { children } = props;
     const locale = await getLocale();
 
-    const messages = await loadTranslations(locale);
+    const messages = await loadClientTranslations(locale);
 
     return (
         <html
@@ -54,9 +55,7 @@ export async function generateMetadata(props: {
 }): Promise<Metadata> {
     const { locale } = await props.params;
 
-    const messages = await loadTranslations(locale);
-
-    const t = createTranslator({ locale, messages });
+    const t = await getTranslations({ locale });
 
     const languages: Record<string, string> = {
         "x-default": siteConfig.baseUrl
@@ -87,17 +86,6 @@ export async function generateMetadata(props: {
                     type: "image/png"
                 }
             ]
-        },
-        robots: {
-            index: true,
-            follow: true,
-            googleBot: {
-                index: true,
-                follow: true,
-                "max-video-preview": -1,
-                "max-image-preview": "large",
-                "max-snippet": -1
-            }
         },
         alternates: {
             languages,

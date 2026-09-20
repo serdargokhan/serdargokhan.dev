@@ -1,10 +1,5 @@
-import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { Link } from "@src/i18n/navigation";
-
-export const metadata: Metadata = {
-    robots: { index: false, follow: false }
-};
 
 export default function NotFoundPage() {
     const t = useTranslations("NotFound");

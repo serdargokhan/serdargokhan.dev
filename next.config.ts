@@ -19,17 +19,6 @@ const contentSecurityPolicy = `
     upgrade-insecure-requests;
 `;
 
-const nextConfig = {
-    async headers() {
-        return [
-            {
-                source: "/(.*)",
-                headers: securityHeaders
-            }
-        ];
-    }
-} satisfies NextConfig;
-
 const securityHeaders = [
     {
         key: "Content-Security-Policy",
@@ -60,5 +49,17 @@ const securityHeaders = [
         value: "camera=(), microphone=(), geolocation=()"
     }
 ];
+
+const nextConfig = {
+    poweredByHeader: false,
+    async headers() {
+        return [
+            {
+                source: "/(.*)",
+                headers: securityHeaders
+            }
+        ];
+    }
+} satisfies NextConfig;
 
 export default createNextIntlPlugin()(nextConfig);

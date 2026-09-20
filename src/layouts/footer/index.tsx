@@ -1,7 +1,7 @@
 "use client";
 
-import { useRouter } from "@src/i18n/navigation";
-import { useLocale } from "next-intl";
+import { useRouter, Link } from "@src/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 import { Label } from "@src/components/ui/label";
 import { Switch } from "@src/components/ui/switch";
 import ExternalLink from "@src/components/common/external-link";
@@ -9,63 +9,98 @@ import GithubIcon from "@src/icons/github";
 import LinkedinIcon from "@src/icons/linkedin";
 import TwitterIcon from "@src/icons/twitter";
 
+const navigationLinks = [
+    { href: "/#about", key: "about" },
+    { href: "/#projects", key: "projects" },
+    { href: "/#contact", key: "contact" },
+    { href: "/privacy", key: "privacy" }
+] as const;
+
+const socialLinks = [
+    {
+        href: "https://github.com/serdargokhan",
+        label: "GitHub",
+        icon: GithubIcon
+    },
+    {
+        href: "https://www.linkedin.com/in/serdarrgokhann",
+        label: "LinkedIn",
+        icon: LinkedinIcon
+    },
+    {
+        href: "https://twitter.com/serdarrgokhann",
+        label: "Twitter",
+        icon: TwitterIcon
+    }
+] as const;
+
 export default function Footer() {
     const router = useRouter();
     const locale = useLocale();
+    const t = useTranslations("Navigation");
+    const tFooter = useTranslations("Footer");
 
     return (
-        <footer className="flex h-footer items-center bg-ink text-white">
-            <div className="container flex items-center justify-between text-sm">
-                <div className="flex items-center gap-2.5">
-                    <ExternalLink
-                        href="https://github.com/serdargokhan"
-                        aria-label="GitHub"
-                    >
-                        <GithubIcon
-                            aria-hidden="true"
-                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
-                        />
-                    </ExternalLink>
-                    <ExternalLink
-                        href="https://www.linkedin.com/in/serdarrgokhann"
-                        aria-label="LinkedIn"
-                    >
-                        <LinkedinIcon
-                            aria-hidden="true"
-                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
-                        />
-                    </ExternalLink>
-                    <ExternalLink
-                        href="https://twitter.com/serdarrgokhann"
-                        aria-label="Twitter"
-                    >
-                        <TwitterIcon
-                            aria-hidden="true"
-                            className="h-8 w-8 fill-white transition-colors duration-150 ease-out hover:fill-yellow"
-                        />
-                    </ExternalLink>
+        <footer className="bg-ink text-white">
+            <div className="container flex min-h-footer flex-col items-center justify-center gap-5 py-5 lg:flex-row lg:justify-between lg:gap-8">
+                <div className="flex items-center gap-1">
+                    {socialLinks.map(({ href, label, icon: Icon }) => (
+                        <ExternalLink
+                            key={href}
+                            href={href}
+                            aria-label={label}
+                            className="group p-1"
+                        >
+                            <Icon
+                                aria-hidden="true"
+                                className="h-6 w-6 fill-white transition-colors duration-150 ease-out group-hover:fill-yellow"
+                            />
+                        </ExternalLink>
+                    ))}
                 </div>
-                <p className="hidden sm:inline-block">
-                    Made with ❤️ © {new Date().getFullYear()}
-                </p>
-                <div className="flex items-center space-x-2 font-semibold">
-                    <Label lang="tr">Türkçe</Label>
-                    <Switch
-                        id="lang"
-                        aria-label={
-                            locale === "en"
-                                ? "Switch to Turkish"
-                                : "Switch to English"
-                        }
-                        className="border-white bg-yellow [&>span]:bg-ink"
-                        checked={locale === "en"}
-                        onCheckedChange={checkedValue => {
-                            router.push("/", {
-                                locale: checkedValue ? "en" : "tr"
-                            });
-                        }}
-                    />
-                    <Label lang="en">English</Label>
+
+                <nav aria-label={tFooter("nav-label")}>
+                    <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold">
+                        {navigationLinks.map(({ href, key }) => (
+                            <li key={key}>
+                                <Link
+                                    href={href}
+                                    className="text-white/70 transition-colors duration-150 ease-out hover:text-yellow"
+                                >
+                                    {key === "privacy"
+                                        ? tFooter("privacy")
+                                        : t(key)}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </nav>
+
+                <div className="flex items-center gap-5">
+                    <p className="font-mono text-xs text-white/50">
+                        {tFooter("copyright", {
+                            year: new Date().getFullYear()
+                        })}
+                    </p>
+                    <div className="flex items-center gap-2.5">
+                        <Label lang="tr">Türkçe</Label>
+                        <Switch
+                            id="lang"
+                            aria-label={
+                                locale === "en"
+                                    ? "Switch to Turkish"
+                                    : "Switch to English"
+                            }
+                            className="border-white bg-yellow [&>span]:bg-ink"
+                            checked={locale === "en"}
+                            onCheckedChange={checkedValue => {
+                                router.push("/", {
+                                    locale: checkedValue ? "en" : "tr"
+                                });
+                            }}
+                        />
+                        <Label lang="en">English</Label>
+                    </div>
                 </div>
             </div>
         </footer>

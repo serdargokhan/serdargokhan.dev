@@ -14,7 +14,7 @@
             "paragraph-three": "Öğrenme serüvenim boyunca çok sayıda proje geliştirdim. Amacım, becerilerimi geliştirmeye devam etmek ve daha da iyi bir geliştirici olmak. Sürekli değişen web geliştirme dünyasında her zaman keşfedilecek bir çok şey olduğu için bu yolculuğun beni nereye götüreceğini görmekten heyecan duyuyorum."
         },
         "PortfolioSection": {
-            "title": "Yaptığım Bazı Projeler",
+            "title": "Yaptığım bazı projeler",
             "actions": {
                 "visit-website": "Ziyaret Et",
                 "source-code": "Kaynak Kodu"
@@ -76,7 +76,7 @@
             }
         },
         "ContactSection": {
-            "title": "İletişime Geçin",
+            "title": "İletişime geçin",
             "paragraph-one": "Herhangi bir sorunuz varsa veya potansiyel bir proje hakkında bilgi almak istiyorsanız, aşağıda verdiğim iletişim e-postası aracılığıyla bana ulaşmaktan çekinmeyin. İşbirliğine her zaman açığım ve yeni müşterilerle çalışmaktan keyif alıyorum.",
             "paragraph-two": "Ayrıca, sadece bağlantı kurmak istiyorsanız veya çalışmalarım hakkında herhangi bir sorunuz varsa, bana bir mesaj göndermekten çekinmeyin. Sizden haber almak için sabırsızlanıyorum!",
             "cta": "Merhaba!",
@@ -86,10 +86,57 @@
         }
     },
     "Navigation": {
+        "home": "Ana sayfa",
         "about": "Hakkımda",
         "projects": "Projeler",
         "contact": "İletişim",
         "resume": "Özgeçmiş"
+    },
+    "Layout": {
+        "skip-to-content": "İçeriğe geç"
+    },
+    "Footer": {
+        "nav-label": "Alt bilgi",
+        "privacy": "Gizlilik",
+        "copyright": "© {year} Serdar Gökhan"
+    },
+    "NotFound": {
+        "eyebrow": "Hata 404",
+        "title": "Bu sayfa mevcut değil",
+        "description": "Bağlantı bozuk olabilir ya da sayfa taşınmış olabilir. Sizi işe yarar bir yere götürelim.",
+        "home": "Ana sayfaya dön",
+        "projects": "Projelere göz at"
+    },
+    "Error": {
+        "eyebrow": "Bir şeyler ters gitti",
+        "title": "Bu sayfa yüklenemedi",
+        "description": "Beklenmeyen bir hata bu sayfanın görüntülenmesini engelledi. Tekrar deneyin veya ana sayfaya dönün.",
+        "retry": "Tekrar dene",
+        "home": "Ana sayfaya dön"
+    },
+    "Privacy": {
+        "title": "Gizlilik",
+        "seo-description": "Bu portföyün verilerinizi nasıl işlediği.",
+        "last-updated": "Son güncelleme Eylül 2026",
+        "intro": "Bu kişisel bir portföy sitesi. Hesap, iletişim formu veya reklam yok; dolayısıyla burada söylenecek çok az şey var.",
+        "sections": {
+            "analytics": {
+                "title": "Analitik",
+                "body": "Hangi sayfaların ziyaret edildiğini ve ne kadar hızlı yüklendiğini görmek için Vercel Analytics ve Speed Insights kullanıyorum. İkisi de çerez kullanmaz, ziyaretçilerin parmak izini çıkarmaz ve sizi diğer sitelerde takip etmez."
+            },
+            "hosting": {
+                "title": "Barındırma",
+                "body": "Site, güvenlik ve kararlılık için IP adresi ve tarayıcı bilgisi gibi standart sunucu kayıtlarını işleyen Vercel tarafından sunulur."
+            },
+            "contact": {
+                "title": "İletişim",
+                "body": "Bana e-posta gönderirseniz, mesajınız yanıtlamak için gereken süre boyunca gelen kutumda kalır. Sizi hiçbir listeye eklemem ve adresinizi paylaşmam."
+            },
+            "changes": {
+                "title": "Değişiklikler",
+                "body": "Burada bir şey değişirse, yukarıdaki tarih de değişir."
+            }
+        }
     },
     "default-seo-title": "Portfolyo | Serdar Gökhan",
     "default-seo-description": "Ölçeklenebilir, çapraz tarayıcı uyumlu, performanslı ve duyarlı web siteleri oluşturan bir ön uç geliştiriciyim ve aynı zamanda bir mekatronik mühendisiyim."

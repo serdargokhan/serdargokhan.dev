@@ -65,8 +65,33 @@
     }
 
     :focus-visible {
-        outline: 3px solid currentColor;
+        outline: 3px solid var(--color-blue);
         outline-offset: 3px;
+    }
+
+    :where(.bg-ink, .bg-blue) :focus-visible {
+        outline-color: var(--color-yellow);
+    }
+
+    .skip-link {
+        position: fixed;
+        top: 0.75rem;
+        left: 0.75rem;
+        z-index: 60;
+        translate: 0 calc(-100% - 0.75rem);
+        border: 2px solid var(--color-ink);
+        background-color: var(--color-yellow);
+        padding: 0.5rem 0.875rem;
+        font-family: var(--font-mono);
+        font-size: 0.8125rem;
+        font-weight: 600;
+        color: var(--color-ink);
+        transition: translate 150ms var(--ease-out);
+
+        &:focus {
+            translate: 0;
+            outline-color: var(--color-ink);
+        }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -92,6 +117,10 @@
 
 @utility h-footer {
     height: var(--footer-height);
+}
+
+@utility min-h-footer {
+    min-height: var(--footer-height);
 }
 
 @utility bg-noise {

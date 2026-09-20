@@ -8,6 +8,7 @@ import type { Locale } from "@src/types/locale";
 import { loadTranslations } from "@src/utils/load-translations";
 import { nunitoFont, plexMonoFont } from "@src/utils/fonts";
 import LocaleDetector from "@src/components/common/locale-detector";
+import SkipToContent from "@src/components/common/skip-to-content";
 import Navbar from "@src/layouts/navbar";
 import Footer from "@src/layouts/footer";
 import siteConfig, { localeUrl } from "../../../site.config";
@@ -28,10 +29,13 @@ export default async function RootLayout(props: LayoutProps<"/[locale]">) {
             lang={locale}
             data-scroll-behavior="smooth"
         >
-            <body>
+            <body className="flex min-h-svh flex-col">
                 <NextIntlClientProvider locale={locale} messages={messages}>
+                    <SkipToContent />
                     <Navbar />
-                    <main>{children}</main>
+                    <main className="flex-1" id="main-content">
+                        {children}
+                    </main>
                     <Footer />
                     <LocaleDetector />
                 </NextIntlClientProvider>

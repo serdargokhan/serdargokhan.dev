@@ -8,13 +8,13 @@
             "paragraph-two": "If you scroll down a bit, you can check out some of my recent projects and see what I've been up to. Right now, I'm working at <link>Borusan Otomotiv</link> and developing websites that are intuitive and easy to use while delivering real value to our customers."
         },
         "AboutSection": {
-            "title": "About Me",
+            "title": "About me",
             "paragraph-one": "Greetings! My name is Serdar Gökhan, and I am a mechatronics engineer who graduated from Marmara University. Currently residing in İstanbul, Türkiye, I began my programming journey while still in university, and in June 2021, I set out to embark on a web development journey.",
             "paragraph-two": "I started by learning the fundamentals of HTML, CSS, and JavaScript, and while it was challenging, I took the time to ensure a strong understanding of these languages. This foundation has allowed me to quickly pick up more advanced frameworks and libraries, such as ReactJS, NextJS, TailwindCSS, and TypeScript.",
             "paragraph-three": "Along the way, I have developed numerous projects, and my goal is to continue to hone my skills and become an even better developer. I am excited to see where this journey takes me, as there is always so much to explore in the ever-changing world of web development."
         },
         "PortfolioSection": {
-            "title": "Some Projects I've Built",
+            "title": "Some projects I've built",
             "actions": {
                 "visit-website": "Visit Website",
                 "source-code": "Source Code"
@@ -76,7 +76,7 @@
             }
         },
         "ContactSection": {
-            "title": "Contact Me",
+            "title": "Contact me",
             "paragraph-one": "If you have any inquiries or would like to discuss a potential project, feel free to reach out to me through the contact email provided below. I'm always open to collaboration and love working with new clients.",
             "paragraph-two": "Additionally, if you simply want to connect or have any questions about my work, don't hesitate to drop me a message. Looking forward to hearing from you soon!",
             "cta": "Say Hello!",
@@ -86,10 +86,57 @@
         }
     },
     "Navigation": {
+        "home": "Home",
         "about": "About",
         "projects": "Projects",
         "contact": "Contact",
         "resume": "Resume"
+    },
+    "Layout": {
+        "skip-to-content": "Skip to content"
+    },
+    "Footer": {
+        "nav-label": "Footer",
+        "privacy": "Privacy",
+        "copyright": "© {year} Serdar Gökhan"
+    },
+    "NotFound": {
+        "eyebrow": "Error 404",
+        "title": "This page doesn't exist",
+        "description": "The link may be broken, or the page may have been moved. Let's get you back to something useful.",
+        "home": "Back to home",
+        "projects": "See projects"
+    },
+    "Error": {
+        "eyebrow": "Something broke",
+        "title": "This page couldn't load",
+        "description": "An unexpected error stopped this page from rendering. Try again, or head back home.",
+        "retry": "Try again",
+        "home": "Back to home"
+    },
+    "Privacy": {
+        "title": "Privacy",
+        "seo-description": "How this portfolio handles your data.",
+        "last-updated": "Last updated September 2026",
+        "intro": "This is a personal portfolio. It has no accounts, no contact forms, and no advertising, so there is very little to say here.",
+        "sections": {
+            "analytics": {
+                "title": "Analytics",
+                "body": "I use Vercel Analytics and Speed Insights to see which pages are visited and how quickly they load. Both are cookieless, do not fingerprint visitors, and do not track you across other sites."
+            },
+            "hosting": {
+                "title": "Hosting",
+                "body": "The site is served by Vercel, which processes standard server logs such as IP address and user agent to keep the site secure and reliable."
+            },
+            "contact": {
+                "title": "Contact",
+                "body": "If you email me, your message stays in my inbox for as long as it takes to reply. I don't add you to any list or share your address."
+            },
+            "changes": {
+                "title": "Changes",
+                "body": "If anything here changes, the date above changes with it."
+            }
+        }
     },
     "default-seo-title": "Portfolio | Serdar Gökhan",
     "default-seo-description": "I’m a frontend developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites."

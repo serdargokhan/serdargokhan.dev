@@ -52,6 +52,10 @@ const securityHeaders = [
 
 const nextConfig = {
     poweredByHeader: false,
+    typedRoutes: true,
+    experimental: {
+        globalNotFound: true
+    },
     async headers() {
         return [
             {

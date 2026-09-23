@@ -1,13 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant hover-fine {
-    @media (hover: hover) and (pointer: fine) {
-        &:hover {
-            @slot;
-        }
-    }
-}
-
 @theme {
     --color-ink: #10162f;
     --color-blue: #3a10e5;
@@ -23,14 +15,12 @@
     --shadow-brutal-blue: -8px 8px 0 0 var(--color-blue);
 
     --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
-    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @layer base {
     :root {
         --header-height: 64px;
         --footer-height: 64px;
-        --layout-height: calc(var(--header-height) + var(--footer-height));
         color-scheme: light;
     }
 
@@ -115,10 +105,6 @@
     height: var(--header-height);
 }
 
-@utility h-footer {
-    height: var(--footer-height);
-}
-
 @utility min-h-footer {
     min-height: var(--footer-height);
 }
@@ -145,33 +131,5 @@
         @starting-style {
             translate: 0 14px;
         }
-    }
-
-    ::view-transition-old(root),
-    ::view-transition-new(root) {
-        animation: none;
-    }
-
-    ::view-transition-group(.projects-fade) {
-        animation-duration: 150ms;
-    }
-
-    ::view-transition-image-pair(.projects-fade) {
-        animation-name: projects-blur;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    ::view-transition-old(*),
-    ::view-transition-new(*),
-    ::view-transition-group(*) {
-        animation-duration: 0s !important;
-        animation-delay: 0s !important;
-    }
-}
-
-@keyframes projects-blur {
-    30% {
-        filter: blur(2px);
     }
 }

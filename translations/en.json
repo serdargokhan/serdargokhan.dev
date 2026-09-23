@@ -3,134 +3,142 @@
         "GreetingSection": {
             "greeting": "Hey there, my name is",
             "name": "Serdar Gökhan",
-            "title": "A passionate Frontend Developer",
-            "paragraph-one": "I'm a frontend developer and mechatronics engineer based in İstanbul. I specialize in creating websites that are not only visually stunning but also perform smoothly across different browsers and devices.",
-            "paragraph-two": "If you scroll down a bit, you can check out some of my recent projects and see what I've been up to. Right now, I'm working at <link>Borusan Otomotiv</link> and developing websites that are intuitive and easy to use while delivering real value to our customers."
+            "title": "Frontend Developer",
+            "paragraph-one": "I'm a frontend developer and mechatronics engineer based in İstanbul. I build websites that look sharp, load fast, and feel right on every browser and device.",
+            "paragraph-two": "Scroll down and you'll see where I've worked and what I've been up to. Right now I'm at <link>Borusan Otomotiv</link>, building sites that are intuitive, easy to use, and genuinely useful to our customers."
         },
         "AboutSection": {
-            "title": "About me",
-            "paragraph-one": "Greetings! My name is Serdar Gökhan, and I am a mechatronics engineer who graduated from Marmara University. Currently residing in İstanbul, Türkiye, I began my programming journey while still in university, and in June 2021, I set out to embark on a web development journey.",
-            "paragraph-two": "I started by learning the fundamentals of HTML, CSS, and JavaScript, and while it was challenging, I took the time to ensure a strong understanding of these languages. This foundation has allowed me to quickly pick up more advanced frameworks and libraries, such as ReactJS, NextJS, TailwindCSS, and TypeScript.",
-            "paragraph-three": "Along the way, I have developed numerous projects, and my goal is to continue to hone my skills and become an even better developer. I am excited to see where this journey takes me, as there is always so much to explore in the ever-changing world of web development."
+            "title": "About Me",
+            "paragraph-one": "I'm Serdar Gökhan, a mechatronics engineer who graduated from Marmara University. I live in İstanbul, started coding while I was still in university, and in June 2021 I set out to build for the web.",
+            "paragraph-two": "I started with the fundamentals — HTML, CSS, and JavaScript — and made sure I really understood them. That foundation helped me pick up React, Next.js, Tailwind CSS, and TypeScript quickly.",
+            "paragraph-three": "Along the way I've built a lot of projects, and I want to keep sharpening my skills and getting better at what I do. The web never stands still, and that's exactly what I love about it."
         },
-        "PortfolioSection": {
-            "title": "Some projects I've built",
-            "actions": {
-                "visit-website": "Visit Website",
-                "source-code": "Source Code"
-            },
-            "projects": {
-                "nextjs": {
-                    "microsoft-todo-clone": {
-                        "description": "This is the biggest project that I have in my portfolio. It took me so long even to get the project so far. I could not finish it due to work but I have done a lot. I owe a lot of new knowledge to this project. In this project I have used TypeScript, SCSS, Firebase Authentication, and MongoDB. I learnt MongoDB from scratch with this project."
-                    },
-                    "add-your-website": {
-                        "description": "I have developed this project as a part of a tutorial from Youtube thanks to Lee Robinson for inspiration. I have used Chakra UI, useSWR, and Skeleton loading for the first time with this project. I also stored the user information on Firebase Firestore and login was implemented with Firebase authentication. It has Github login authentication."
-                    },
-                    "shopify-clone": {
-                        "description": "I have completed this project and I got inspired from Shopify website. It is kind of e-commerce website. There are sign in and sign up proccess. User can create a product, delete a product if they created it, and also add to cart. I used minimal workflow with this project and no extra framework."
-                    }
+        "ExperienceSection": {
+            "title": "Where I've Worked",
+            "description": "A quick look at the teams and products I've been part of.",
+            "present": "Present",
+            "current": "Current",
+            "roles": {
+                "borusan-otomotiv": {
+                    "title": "Frontend Developer",
+                    "highlights": [
+                        {
+                            "lead": "Migrated legacy JavaScript modules to TypeScript",
+                            "text": "incrementally, eliminating dead code and tightening types to raise code quality and make refactors safer."
+                        },
+                        {
+                            "lead": "Developed and shipped user-facing features",
+                            "text": "on Borusan Next, building responsive, accessible pages on a Next.js codebase alongside design and backend teams."
+                        },
+                        {
+                            "lead": "Built internal dashboards used across the business",
+                            "text": "shipping data-driven interfaces with cross-functional teams that support day-to-day operations."
+                        },
+                        {
+                            "lead": "Applied AI-assisted development practices",
+                            "text": "using AI tooling deliberately for implementation, refactoring, and code review to ship faster without lowering quality."
+                        }
+                    ]
                 },
-                "reactjs": {
-                    "create-blog-posts": {
-                        "description": "I have completed this blog website. It has sign in and sign up utilities. User can sign up, sign in, and create a blog post. sign in and sign up credentials is stored on firebase real-time database. After blog post is created, it will be shown on the home page. I also experienced framer-motion library with this project."
-                    },
-                    "crypto-marketcap": {
-                        "description": "I have completed this cryptocurrency marketcap website. It has landing page, and a header to show some crypto statistics. It also has coins tab and user can see Top 100 coins with images and some other values. I have used Cryptomarketcap API for this project. Finally, there were some errors about CORS policy and I used netlify-cli tool for that as well."
-                    },
-                    "auth-firebase": {
-                        "description": "This was my first project using TailwindCSS. It has basically two screens sign up and sign in. There is no react-router setup. I learned basics of React. I used Firebase real-time database to store user credentials."
-                    },
-                    "currency-converter": {
-                        "description": "This is a basic currency converter website. I have used currency API to retrieve data of currencies. I also used react-select library to be specific about currency exchanges."
-                    },
-                    "resipe-search": {
-                        "description": "This is my very first React single page application. I have used edamam API for this project. It basically has an input field for searching some recipes. I also used react-loader-spinner for loading state for this project for better user experience."
-                    }
+                "entererp": {
+                    "title": "Frontend Developer",
+                    "highlights": [
+                        {
+                            "lead": "Developed, maintained, and shipped e-commerce sites",
+                            "text": "with TypeScript and Next.js, playing a key role on Baxana and Molimba and serving thousands of users."
+                        },
+                        {
+                            "lead": "Built the official site",
+                            "text": "for EnterERP from scratch with Next.js and Tailwind, using SEO techniques to grow visibility and organic traffic."
+                        },
+                        {
+                            "lead": "Cut initial document size 27%",
+                            "text": "and HTTP requests 18% with dynamic imports, image optimization, code splitting, and minification, improving page load times and Core Web Vitals."
+                        },
+                        {
+                            "lead": "Designed and implemented vendor integrations",
+                            "text": "for shipping, marketplace, and payments from multiple vendors, creating a shared API for internal use cases with TypeScript and Node.js."
+                        }
+                    ]
                 },
-                "reactNative": {
-                    "register-and-search-news": {
-                        "description": "This is my news application developed with React-Native. I have used lots of frameworks with this project. It has sign up and sign in screens. Once user is authenticated it redirects user to home page to show the latest news from news API. I implemented categories, search, and skeleton loading into this project. There is also a profile section which user can see information about itself."
-                    },
-                    "restaurant-search": {
-                        "description": "This is a restaurant search application. I have used Yelp API to get the data about restaurants. There is an input field on the home page for users to search restaurants. Once they search it, they can tap into the details of individual restaurant and see lots of details like reviews, images, and location of the restaurant on the map."
-                    },
-                    "auth-screen": {
-                        "description": "This is a basic UI implementation for react-native. It has just sign up and sign in screens with no interactivity like signing in. I have used bottom tab navigator with this project and also I improved my layout skills in react-native."
-                    }
-                },
-                "javascript": {
-                    "budget-tracker": {
-                        "description": "This is a budget tracker website. It provides some functions for user to track their budget with one screen."
-                    },
-                    "movie-list": {
-                        "description": "This is a movie list website. It shows latest trending movies on the screen. I have used themoviedb API to get the data of movies."
-                    },
-                    "todo-list": {
-                        "description": "This is a to-do list website. As every beginner I made a to-do list to understand everything more in programming. User can add to-do, complete to-do, and delete to-do like so."
-                    },
-                    "search-weather-location": {
-                        "description": "This is a weather website to show weather of a given location. I have used Openweathermap API to get the data and show to the user. It also has the search functionality for a location."
-                    }
+                "entererp-intern": {
+                    "title": "Frontend Developer Intern",
+                    "highlights": [
+                        {
+                            "lead": "Improved my JavaScript skills",
+                            "text": "by practicing the language fundamentals throughout the internship."
+                        },
+                        {
+                            "lead": "Learned React and Next.js",
+                            "text": "and practiced their core concepts by building small features."
+                        }
+                    ]
                 }
             }
         },
         "ContactSection": {
-            "title": "Contact me",
-            "paragraph-one": "If you have any inquiries or would like to discuss a potential project, feel free to reach out to me through the contact email provided below. I'm always open to collaboration and love working with new clients.",
-            "paragraph-two": "Additionally, if you simply want to connect or have any questions about my work, don't hesitate to drop me a message. Looking forward to hearing from you soon!",
+            "title": "Contact Me",
+            "paragraph-one": "Have a project in mind, or just want to talk? Send me an email at the address below. I'm always open to working with new people.",
+            "paragraph-two": "Have a question about something I've built, or just want to say hi? I'd love to hear from you.",
             "cta": "Say Hello!",
             "email-label": "Email",
             "copy-email": "Copy Email",
             "copied": "Copied"
         }
     },
+    "LocaleDetector": {
+        "region-label": "Language Suggestion",
+        "message": "Looks like you're visiting from Türkiye. Want to read this in Turkish?",
+        "action": "Switch To Turkish",
+        "dismiss": "Dismiss Language Suggestion"
+    },
     "Navigation": {
         "home": "Home",
         "about": "About",
-        "projects": "Projects",
+        "experience": "Experience",
         "contact": "Contact",
         "resume": "Resume"
     },
     "Layout": {
-        "skip-to-content": "Skip to content"
+        "skip-to-content": "Skip To Content"
     },
     "Footer": {
         "nav-label": "Footer",
+        "language": "Language",
         "privacy": "Privacy",
         "copyright": "© {year} Serdar Gökhan"
     },
     "NotFound": {
         "eyebrow": "Error 404",
         "title": "This page doesn't exist",
-        "description": "The link may be broken, or the page may have been moved. Let's get you back to something useful.",
-        "home": "Back to home",
-        "projects": "See projects"
+        "description": "The link may be broken, or the page may have moved. Let's get you back to something useful.",
+        "home": "Back To Home",
+        "experience": "See My Experience"
     },
     "Error": {
-        "eyebrow": "Something broke",
+        "eyebrow": "Something Broke",
         "title": "This page couldn't load",
-        "description": "An unexpected error stopped this page from rendering. Try again, or head back home.",
-        "retry": "Try again",
-        "home": "Back to home"
+        "description": "Something unexpected stopped this page from loading. Try again, or head back home.",
+        "retry": "Try Again",
+        "home": "Back To Home"
     },
     "Privacy": {
         "title": "Privacy",
         "seo-description": "How this portfolio handles your data.",
-        "last-updated": "Last updated September 2026",
-        "intro": "This is a personal portfolio. It has no accounts, no contact forms, and no advertising, so there is very little to say here.",
+        "last-updated": "Last Updated {date}",
+        "intro": "This is a personal portfolio. There are no accounts, no contact forms, and no ads, so there's very little to say here.",
         "sections": {
             "analytics": {
                 "title": "Analytics",
-                "body": "I use Vercel Analytics and Speed Insights to see which pages are visited and how quickly they load. Both are cookieless, do not fingerprint visitors, and do not track you across other sites."
+                "body": "I use Vercel Analytics and Speed Insights to see which pages are visited and how quickly they load. Both are cookieless, don't fingerprint visitors, and don't track you across other sites."
             },
             "hosting": {
                 "title": "Hosting",
-                "body": "The site is served by Vercel, which processes standard server logs such as IP address and user agent to keep the site secure and reliable."
+                "body": "Vercel serves the site and processes standard server logs, like IP address and user agent, to keep it secure and reliable."
             },
             "contact": {
                 "title": "Contact",
-                "body": "If you email me, your message stays in my inbox for as long as it takes to reply. I don't add you to any list or share your address."
+                "body": "If you email me, your message stays in my inbox for as long as it takes me to reply. I don't add you to any list, and I don't share your address."
             },
             "changes": {
                 "title": "Changes",
@@ -139,5 +147,5 @@
         }
     },
     "default-seo-title": "Portfolio | Serdar Gökhan",
-    "default-seo-description": "I’m a frontend developer also a mechatronics engineer building scalable, cross-browser compatible, performant, and responsive websites."
+    "default-seo-description": "Frontend developer and mechatronics engineer building fast, scalable websites that work across browsers and devices."
 }

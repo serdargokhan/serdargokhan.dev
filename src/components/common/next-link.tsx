@@ -1,13 +1,11 @@
-import type { HTMLProps } from "react";
 import type { LinkProps } from "next/link";
 import Link from "next/link";
 
-type NextLinkProps = LinkProps & Omit<HTMLProps<HTMLAnchorElement>, "ref">;
+export type NextLinkProps<RouteInferType extends string = string> =
+    LinkProps<RouteInferType>;
 
-export default function NextLink({ href, children, ...rest }: NextLinkProps) {
-    return (
-        <Link href={href} {...rest}>
-            {children}
-        </Link>
-    );
+export default function NextLink<RouteInferType extends string = string>(
+    props: NextLinkProps<RouteInferType>
+) {
+    return <Link {...props} />;
 }

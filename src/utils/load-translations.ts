@@ -1,20 +1,16 @@
-import type { Locale } from "@src/types/locale";
 import { cache } from "react";
+import { getMessages } from "next-intl/server";
 
-export const loadTranslations = cache(async (locale: Locale) => {
-    return (await import(`../../translations/${locale}.json`)).default;
-});
-
-export const loadClientTranslations = cache(async (locale: Locale) => {
-    const messages = await loadTranslations(locale);
+export const loadClientTranslations = cache(async () => {
+    const messages = await getMessages();
 
     return {
         Navigation: messages.Navigation,
         Footer: messages.Footer,
         Error: messages.Error,
+        LocaleDetector: messages.LocaleDetector,
         Home: {
-            ContactSection: messages.Home.ContactSection,
-            PortfolioSection: messages.Home.PortfolioSection
+            ContactSection: messages.Home.ContactSection
         }
     };
 });

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
+import { getFormatter, getTranslations } from "next-intl/server";
 import type { Locale } from "@src/types/locale";
 import { indexableRobots } from "@src/utils/metadata";
 import siteConfig, { localeUrl } from "../../../../site.config";
@@ -34,13 +34,20 @@ const sections = ["analytics", "hosting", "contact", "changes"] as const;
 
 export default async function PrivacyPage() {
     const t = await getTranslations("Privacy");
+    const format = await getFormatter();
+
+    const lastUpdated = format.dateTime(new Date(siteConfig.lastUpdated), {
+        month: "long",
+        year: "numeric",
+        timeZone: "UTC"
+    });
 
     return (
         <section className="bg-cream bg-noise">
             <div className="container grid gap-12 py-20 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16 lg:py-28">
                 <div className="lg:sticky lg:top-24 lg:self-start">
                     <p className="font-mono text-sm font-medium text-blue">
-                        {t("last-updated")}
+                        {t("last-updated", { date: lastUpdated })}
                     </p>
                     <h1 className="mt-4 text-5xl font-extrabold tracking-tight text-balance text-ink sm:text-6xl">
                         {t("title")}

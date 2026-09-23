@@ -1,12 +1,12 @@
-import type { ComponentProps } from "react";
-import NextLink from "@src/components/common/next-link";
+import NextLink, { type NextLinkProps } from "@src/components/common/next-link";
 
-type ExternalLinkProps = ComponentProps<typeof NextLink>;
+type ExternalLinkProps<RouteInferType extends string = string> =
+    NextLinkProps<RouteInferType>;
 
-export default function ExternalLink({
+export default function ExternalLink<RouteInferType extends string = string>({
     target = "_blank",
     rel = "noopener noreferrer",
     ...rest
-}: ExternalLinkProps) {
+}: ExternalLinkProps<RouteInferType>) {
     return <NextLink target={target} rel={rel} {...rest} />;
 }

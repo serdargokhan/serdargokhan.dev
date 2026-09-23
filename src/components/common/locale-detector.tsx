@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useSyncExternalStore } from "react";
-import { useLocale } from "next-intl";
-import { useRouter } from "@src/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@src/i18n/navigation";
 import CrossIcon from "@src/icons/cross";
 import { cn } from "@src/utils/cn";
 
@@ -25,16 +25,23 @@ export default function LocaleDetector() {
     );
 
     const router = useRouter();
+    const pathname = usePathname();
     const locale = useLocale();
+    const t = useTranslations("LocaleDetector");
 
     const showLocaleDetector =
         shouldDetectLocale && !dismissed && locale !== "tr";
 
+    function persistPreference() {
+        localStorage.setItem("locale-preference", "deny");
+        setDismissed(true);
+    }
+
     return (
         <div
             role="region"
-            aria-label="Dil önerisi"
-            lang="tr"
+            aria-label={t("region-label")}
+            lang={locale}
             className={cn(
                 "invisible fixed inset-0 top-auto translate-y-8 border-t-2 border-yellow bg-white py-4 text-ink opacity-0",
                 showLocaleDetector &&
@@ -42,28 +49,25 @@ export default function LocaleDetector() {
             )}
         >
             <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-                <p className="text-sm font-medium">
-                    Görünüşe göre Türkiye&apos;den bağlanıyorsunuz. Daha iyi bir
-                    içerik deneyimi için dilinizi Türkçe yapabilirsiniz.
-                </p>
+                <p className="text-sm font-medium">{t("message")}</p>
                 <div className="flex items-center gap-4 max-md:w-full">
                     <div className="inline-block max-md:flex-1">
                         <button
                             type="button"
-                            onClick={() => router.push("/", { locale: "tr" })}
-                            className="inline-block w-full press rounded-md border border-ink bg-white px-4 py-1.5 font-semibold hover:shadow-brutal-blue motion-safe:hover-fine:translate-x-1 motion-safe:hover-fine:-translate-y-1"
+                            onClick={() => {
+                                persistPreference();
+                                router.replace(pathname, { locale: "tr" });
+                            }}
+                            className="inline-block w-full press rounded-md border border-ink bg-white px-4 py-1.5 font-semibold hover:shadow-brutal-blue motion-safe:hover:translate-x-1 motion-safe:hover:-translate-y-1"
                         >
-                            Devam
+                            {t("action")}
                         </button>
                     </div>
                     <button
                         type="button"
-                        aria-label="Dismiss language suggestion"
+                        aria-label={t("dismiss")}
                         className="rounded-full border border-ink p-1.5 transition-colors duration-150 ease-out hover:bg-blue hover:text-white"
-                        onClick={() => {
-                            localStorage.setItem("locale-preference", "deny");
-                            setDismissed(true);
-                        }}
+                        onClick={persistPreference}
                     >
                         <CrossIcon aria-hidden="true" className="h-3.5 w-3.5" />
                     </button>

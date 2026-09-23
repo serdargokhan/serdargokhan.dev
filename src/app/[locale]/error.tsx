@@ -33,7 +33,7 @@ export default function ErrorPage({
                     <button
                         type="button"
                         onClick={reset}
-                        className="inline-flex press items-center border-2 border-yellow bg-yellow px-5 py-2.5 font-mono text-sm font-semibold text-ink hover:shadow-brutal-blue motion-safe:hover-fine:translate-x-0.5 motion-safe:hover-fine:-translate-y-0.5"
+                        className="inline-flex press items-center border-2 border-yellow bg-yellow px-5 py-2.5 font-mono text-sm font-semibold text-ink hover:shadow-brutal-blue motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5"
                     >
                         {t("retry")}
                     </button>

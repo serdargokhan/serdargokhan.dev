@@ -34,7 +34,7 @@ export default function ContactSection() {
                         <CopyEmailButton email={email} />
                         <ExternalLink
                             href={`mailto:${email}`}
-                            className="inline-flex press items-center border-2 border-ink bg-yellow px-4 py-1.5 font-mono text-xs font-semibold text-ink hover:shadow-brutal-blue motion-safe:hover-fine:translate-x-0.5 motion-safe:hover-fine:-translate-y-0.5"
+                            className="inline-flex press items-center border-2 border-ink bg-yellow px-4 py-1.5 font-mono text-xs font-semibold text-ink hover:shadow-brutal-blue motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5"
                         >
                             {t("cta")}
                         </ExternalLink>

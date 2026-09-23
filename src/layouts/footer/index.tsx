@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter, Link } from "@src/i18n/navigation";
+import { useRouter, usePathname, Link } from "@src/i18n/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { Label } from "@src/components/ui/label";
 import { Switch } from "@src/components/ui/switch";
@@ -11,7 +11,7 @@ import TwitterIcon from "@src/icons/twitter";
 
 const navigationLinks = [
     { href: "/#about", key: "about" },
-    { href: "/#projects", key: "projects" },
+    { href: "/#experience", key: "experience" },
     { href: "/#contact", key: "contact" },
     { href: "/privacy", key: "privacy" }
 ] as const;
@@ -36,6 +36,7 @@ const socialLinks = [
 
 export default function Footer() {
     const router = useRouter();
+    const pathname = usePathname();
     const locale = useLocale();
     const t = useTranslations("Navigation");
     const tFooter = useTranslations("Footer");
@@ -82,24 +83,36 @@ export default function Footer() {
                             year: new Date().getFullYear()
                         })}
                     </p>
-                    <div className="flex items-center gap-2.5">
-                        <Label lang="tr">Türkçe</Label>
+                    <div
+                        role="group"
+                        aria-label={tFooter("language")}
+                        className="flex items-center gap-2.5"
+                    >
+                        <Label
+                            htmlFor="lang"
+                            lang="tr"
+                            className="cursor-pointer"
+                        >
+                            Türkçe
+                        </Label>
                         <Switch
                             id="lang"
-                            aria-label={
-                                locale === "en"
-                                    ? "Switch to Turkish"
-                                    : "Switch to English"
-                            }
+                            aria-label={tFooter("language")}
                             className="border-white bg-yellow [&>span]:bg-ink"
                             checked={locale === "en"}
                             onCheckedChange={checkedValue => {
-                                router.push("/", {
+                                router.replace(pathname, {
                                     locale: checkedValue ? "en" : "tr"
                                 });
                             }}
                         />
-                        <Label lang="en">English</Label>
+                        <Label
+                            htmlFor="lang"
+                            lang="en"
+                            className="cursor-pointer"
+                        >
+                            English
+                        </Label>
                     </div>
                 </div>
             </div>

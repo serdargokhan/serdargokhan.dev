@@ -8,8 +8,9 @@ import NextImage from "@src/components/common/next-image";
 import NextLink from "@src/components/common/next-link";
 import ExternalLinkIcon from "@src/icons/external-link";
 import SiteLogo from "@public/images/common/site-logo.svg";
+import type { Route } from "next";
 
-const navigationLinks = ["about", "projects", "contact"] as const;
+const navigationLinks = ["about", "experience", "contact"] as const;
 
 export default function Navbar() {
     const [activeLink, setActiveLink] = useState("");
@@ -19,10 +20,10 @@ export default function Navbar() {
     const t = useTranslations("Navigation");
 
     useEffect(() => {
-        if (window.location.hash) {
-            document
-                .querySelector(window.location.hash)
-                ?.scrollIntoView({ behavior: "smooth" });
+        const id = window.location.hash.slice(1);
+
+        if (id) {
+            document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
         }
     }, []);
 
@@ -111,11 +112,11 @@ export default function Navbar() {
                 </ul>
 
                 <NextLink
-                    className="inline-flex shrink-0 press items-center gap-1.5 border-2 border-ink bg-white px-3 py-1.5 text-xs font-bold text-ink hover:shadow-brutal-yellow xs:text-sm sm:px-4 motion-safe:hover-fine:translate-x-0.5 motion-safe:hover-fine:-translate-y-0.5"
+                    className="inline-flex shrink-0 press items-center gap-1.5 border-2 border-ink bg-white px-3 py-1.5 text-xs font-bold text-ink hover:shadow-brutal-yellow motion-safe:hover:translate-x-0.5 motion-safe:hover:-translate-y-0.5 xs:text-sm sm:px-4"
                     href={
-                        locale === "tr"
+                        (locale === "tr"
                             ? "/static/Serdar-Gökhan-BAKIRCI-TR.pdf"
-                            : "/static/Serdar-Gökhan-BAKIRCI-EN.pdf"
+                            : "/static/Serdar-Gökhan-BAKIRCI-EN.pdf") as Route
                     }
                     target="_blank"
                     rel="noopener noreferrer"

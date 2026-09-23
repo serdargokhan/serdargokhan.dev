@@ -6,7 +6,7 @@
 ✨ My portfolio website built with <a href="https://nextjs.org" target="_blank">NextJS</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a>, and shipped with <a href="https://vercel.com" target="_blank">Vercel</a>.
 </p>
 
-![Image 1](./public/opengraph-image.jpg)
+![Image 1](./src/app/[locale]/opengraph-image.jpg)
 
 ## 🛠 Installation & Set Up
 
@@ -63,6 +63,13 @@ serdargokhan.dev
 ├── src
 │   ├── app
 │   │   ├── [locale]
+│   │   │   ├── privacy
+│   │   │   ├── error.tsx
+│   │   │   ├── layout.tsx
+│   │   │   ├── opengraph-image.jpg
+│   │   │   └── page.tsx
+│   │   ├── global-not-found.tsx
+│   │   ├── globals.css
 │   │   ├── robots.ts
 │   │   └── sitemap.ts
 │   ├── components
@@ -71,8 +78,8 @@ serdargokhan.dev
 │   │   │   └── home
 │   │   │       ├── about-section
 │   │   │       ├── contact-section
-│   │   │       ├── greeting-section
-│   │   │       └── portfolio-section
+│   │   │       ├── experience-section
+│   │   │       └── greeting-section
 │   │   └── ui
 │   ├── i18n
 │   ├── icons
@@ -80,6 +87,7 @@ serdargokhan.dev
 │   │   ├── footer
 │   │   └── navbar
 │   ├── types
-│   └── utils
+│   ├── utils
+│   └── proxy.ts
 └── translations
 ```

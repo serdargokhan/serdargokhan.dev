@@ -1,9 +1,10 @@
 import "../globals.css";
-import { NextIntlClientProvider } from "next-intl";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getLocale, getTranslations } from "next-intl/server";
-import { Analytics } from "@vercel/analytics/react";
+import { notFound } from "next/navigation";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import type { Locale } from "@src/types/locale";
 import { loadClientTranslations } from "@src/utils/load-translations";
 import { nunitoFont, plexMonoFont } from "@src/utils/fonts";
@@ -18,11 +19,22 @@ export function generateStaticParams(): { locale: Locale }[] {
     return routing.locales.map(locale => ({ locale }));
 }
 
+export const viewport: Viewport = {
+    themeColor: "#10162f",
+    colorScheme: "light"
+};
+
 export default async function RootLayout(props: LayoutProps<"/[locale]">) {
     const { children } = props;
+    const { locale: localeParam } = await props.params;
+
+    if (!hasLocale(routing.locales, localeParam)) {
+        notFound();
+    }
+
     const locale = await getLocale();
 
-    const messages = await loadClientTranslations(locale);
+    const messages = await loadClientTranslations();
 
     return (
         <html
@@ -34,7 +46,7 @@ export default async function RootLayout(props: LayoutProps<"/[locale]">) {
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <SkipToContent />
                     <Navbar />
-                    <main className="flex-1" id="main-content">
+                    <main className="flex-1" id="main-content" tabIndex={-1}>
                         {children}
                     </main>
                     <Footer />
@@ -96,8 +108,7 @@ export async function generateMetadata(props: {
         },
         twitter: {
             card: "summary_large_image",
-            creator: "@serdarrgokhann",
-            images: ["/opengraph-image.jpg"]
+            creator: "@serdarrgokhann"
         },
         openGraph: {
             title: "Serdar Gökhan",
@@ -105,8 +116,7 @@ export async function generateMetadata(props: {
             url: localeUrl(locale),
             siteName: "Serdar Gökhan",
             locale: ogLocale(locale),
-            type: "website",
-            images: ["/opengraph-image.jpg"]
+            type: "website"
         }
     };
 }

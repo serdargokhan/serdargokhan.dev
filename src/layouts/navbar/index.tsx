@@ -74,7 +74,7 @@ export default function Navbar() {
                     <NextImage width={28} height={28} src={SiteLogo} alt="" />
                 </Link>
 
-                <ul className="flex items-center gap-4 text-sm font-semibold sm:gap-8 sm:text-base">
+                <ul className="hidden items-center gap-4 text-sm font-semibold sm:flex sm:gap-8 sm:text-base">
                     {navigationLinks.map(navigationLink => (
                         <li key={navigationLink}>
                             <Link
